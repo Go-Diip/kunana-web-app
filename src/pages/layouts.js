@@ -11,6 +11,7 @@ import BenefitsSection from "../layouts/BenefitsSection"
 import Plant from "../assets/icons/plant.svg"
 import Thumb from "../assets/icons/thumb.svg"
 import Trees from "../assets/icons/trees.svg"
+import MilksGrid from "../layouts/MilksGrid"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -41,6 +42,21 @@ const Layouts = () => {
         }
       }
       benefitsImage: file(relativePath: { eq: "benefits.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      greenMilk: file(relativePath: { eq: "green-milk.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      blueMilk: file(relativePath: { eq: "blue-milk.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      browMilk: file(relativePath: { eq: "brow-milk.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -89,6 +105,20 @@ const Layouts = () => {
     },
   ]
 
+  const milks = [
+    {
+      image: staticQuery.greenMilk,
+      title: "Original Flavor",
+      background: "#3DAC48",
+    },
+    { image: staticQuery.browMilk, title: "Chocolate", background: "#FFD100" },
+    {
+      image: staticQuery.blueMilk,
+      title: "Unsweetened",
+      background: "#00B2E4",
+    },
+  ]
+
   return (
     <Layout
       seo={{
@@ -116,6 +146,9 @@ const Layouts = () => {
 
       <LayoutTitle>InfoGrid</LayoutTitle>
       <InfoGrid items={infoItems} />
+
+      <LayoutTitle>MilksGrid</LayoutTitle>
+      <MilksGrid items={milks} />
     </Layout>
   )
 }
