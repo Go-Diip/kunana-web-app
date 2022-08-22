@@ -10,6 +10,7 @@ import Plant from "../assets/icons/plant.svg"
 import Thumb from "../assets/icons/thumb.svg"
 import Trees from "../assets/icons/trees.svg"
 import MilksGrid from "../layouts/MilksGrid"
+import SaveBanner from "../layouts/SaveBanner"
 
 const Index = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -55,6 +56,11 @@ const Index = () => {
         }
       }
       browMilk: file(relativePath: { eq: "brow-milk.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      bananaHand: file(relativePath: { eq: "banana-hand.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -130,7 +136,10 @@ const Index = () => {
         benefits={benefits}
       />
       <InfoGrid items={infoItems} />
-
+      <SaveBanner
+        title="Save one banana at the time."
+        image={staticQuery.bananaHand}
+      />
       <MilksGrid items={milks} />
     </Layout>
   )

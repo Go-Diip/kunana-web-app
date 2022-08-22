@@ -1,17 +1,19 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
+import { LayoutTitle } from "../styles/app.styles"
+
 import Layout from "../components/layout"
 import MiscContent from "../layouts/MiscContent"
-import { LayoutTitle } from "../styles/app.styles"
 import HomeHero from "../layouts/HomeHero"
 import InfoGrid from "../layouts/InfoGrid"
 import BenefitsSection from "../layouts/BenefitsSection"
+import MilksGrid from "../layouts/MilksGrid"
 
 import Plant from "../assets/icons/plant.svg"
 import Thumb from "../assets/icons/thumb.svg"
 import Trees from "../assets/icons/trees.svg"
-import MilksGrid from "../layouts/MilksGrid"
+import SaveBanner from "../layouts/SaveBanner"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -57,6 +59,11 @@ const Layouts = () => {
         }
       }
       browMilk: file(relativePath: { eq: "brow-milk.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      bananaHand: file(relativePath: { eq: "banana-hand.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -149,6 +156,12 @@ const Layouts = () => {
 
       <LayoutTitle>MilksGrid</LayoutTitle>
       <MilksGrid items={milks} />
+
+      <LayoutTitle>SaveBanner</LayoutTitle>
+      <SaveBanner
+        title="Save one banana at the time."
+        image={staticQuery.bananaHand}
+      />
     </Layout>
   )
 }
