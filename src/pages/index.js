@@ -11,6 +11,7 @@ import Thumb from "../assets/icons/thumb.svg"
 import Trees from "../assets/icons/trees.svg"
 import MilksGrid from "../layouts/MilksGrid"
 import SaveBanner from "../layouts/SaveBanner"
+import { isBrowser } from "../utils"
 
 const Index = () => {
   const staticQuery = useStaticQuery(graphql`
