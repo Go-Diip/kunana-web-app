@@ -3,6 +3,7 @@ import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.comp
 import CustomImage from "../../components/custom-image/custom-image.component"
 import CustomButton from "../../components/custom-button/custom-button.component"
 import Play from "../../assets/icons/play-icon.svg"
+import { Grid } from "@mui/material"
 
 export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.palette.primary.main};
@@ -19,6 +20,18 @@ export const Background = styled(CustomBgImage)`
   overflow: visible;
 `
 
+export const ImageGrid = styled(Grid)`
+  position: relative;
+  overflow: visible;
+`
+
+export const ProductImage = styled(CustomImage)`
+  width: 550px;
+  position: absolute;
+  z-index: 4;
+  right: -100px;
+`
+
 export const MainContainer = styled.div`
   max-width: 350px;
   overflow: visible;
@@ -26,13 +39,6 @@ export const MainContainer = styled.div`
 
 export const LogoImage = styled(CustomImage)`
   max-width: 280px;
-`
-
-export const ProductImage = styled(CustomImage)`
-  width: 550px;
-  position: absolute;
-  z-index: 4;
-  bottom: -68px;
 `
 
 export const Description = styled.p`
