@@ -13,7 +13,7 @@ const InfoGrid = ({ items }) => {
           container
           spacing={{ xs: 3, md: 4, lg: 10 }}
           key={`info-item-${index}`}
-          direction={index % 2 === 0 ? "row-reverse" : "row"}
+          direction={index % 2 === 0 ? "row" : "row-reverse"}
           alignItems={"center"}
         >
           <S.ImageGrid item xs={12} md={7}>
