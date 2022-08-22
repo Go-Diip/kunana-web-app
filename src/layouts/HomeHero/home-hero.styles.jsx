@@ -8,6 +8,7 @@ export const Wrapper = styled.section`
   padding-bottom: 5em;
   background: linear-gradient(182deg, #ffd100 90%, transparent calc(90% + 2px));
   overflow: visible;
+  position: relative;
 `
 
 export const Background = styled(CustomBgImage)`
