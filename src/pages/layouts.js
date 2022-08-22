@@ -6,6 +6,11 @@ import MiscContent from "../layouts/MiscContent"
 import { LayoutTitle } from "../styles/app.styles"
 import HomeHero from "../layouts/HomeHero"
 import InfoGrid from "../layouts/InfoGrid"
+import BenefitsSection from "../layouts/BenefitsSection"
+
+import Plant from "../assets/icons/plant.svg"
+import Thumb from "../assets/icons/thumb.svg"
+import Trees from "../assets/icons/trees.svg"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -26,6 +31,16 @@ const Layouts = () => {
         }
       }
       infoImg: file(relativePath: { eq: "info-img.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      tastyImg: file(relativePath: { eq: "tasty-img.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      benefitsImage: file(relativePath: { eq: "benefits.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -54,6 +69,26 @@ const Layouts = () => {
     },
   ]
 
+  const benefits = [
+    {
+      image: <Plant />,
+      title: "Plant based",
+      description: "High in proteins, low in sugar, dairy-free beverage.",
+    },
+    {
+      image: <Thumb />,
+      title: "Responsibly Sourced",
+      description:
+        "About 100,000 tons of imperfect up-cycled bananas from Ecuador, which supports their farmers with additional revenue. ",
+    },
+    {
+      image: <Trees />,
+      title: "Better for the Planet",
+      description:
+        "Less CO2 emissions than traditional milk. Less water than almonds.",
+    },
+  ]
+
   return (
     <Layout
       seo={{
@@ -64,12 +99,21 @@ const Layouts = () => {
     >
       <LayoutTitle>MiscContent</LayoutTitle>
       <MiscContent content={`<p>Some content Here</p>`} />
+
       <LayoutTitle>HomeHero</LayoutTitle>
       <HomeHero
         backgroundImage={staticQuery.backgroundImage}
         logoImage={staticQuery.logo}
         productImage={staticQuery.productImage}
       />
+
+      <LayoutTitle>BenefitsSection</LayoutTitle>
+      <BenefitsSection
+        backgroundImage={staticQuery.benefitsImage}
+        tastyImg={staticQuery.tastyImg}
+        benefits={benefits}
+      />
+
       <LayoutTitle>InfoGrid</LayoutTitle>
       <InfoGrid items={infoItems} />
     </Layout>
