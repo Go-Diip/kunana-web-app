@@ -1,16 +1,19 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
+import { LayoutTitle } from "../styles/app.styles"
+
 import Layout from "../components/layout"
 import MiscContent from "../layouts/MiscContent"
-import { LayoutTitle } from "../styles/app.styles"
 import HomeHero from "../layouts/HomeHero"
 import InfoGrid from "../layouts/InfoGrid"
 import BenefitsSection from "../layouts/BenefitsSection"
+import MilksGrid from "../layouts/MilksGrid"
 
 import Plant from "../assets/icons/plant.svg"
 import Thumb from "../assets/icons/thumb.svg"
 import Trees from "../assets/icons/trees.svg"
+import SaveBanner from "../layouts/SaveBanner"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -41,6 +44,26 @@ const Layouts = () => {
         }
       }
       benefitsImage: file(relativePath: { eq: "benefits.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      greenMilk: file(relativePath: { eq: "green-milk.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      blueMilk: file(relativePath: { eq: "blue-milk.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      browMilk: file(relativePath: { eq: "brow-milk.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      bananaHand: file(relativePath: { eq: "banana-hand.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -89,6 +112,20 @@ const Layouts = () => {
     },
   ]
 
+  const milks = [
+    {
+      image: staticQuery.greenMilk,
+      title: "Original Flavor",
+      background: "#3DAC48",
+    },
+    { image: staticQuery.browMilk, title: "Chocolate", background: "#FFD100" },
+    {
+      image: staticQuery.blueMilk,
+      title: "Unsweetened",
+      background: "#00B2E4",
+    },
+  ]
+
   return (
     <Layout
       seo={{
@@ -116,6 +153,15 @@ const Layouts = () => {
 
       <LayoutTitle>InfoGrid</LayoutTitle>
       <InfoGrid items={infoItems} />
+
+      <LayoutTitle>MilksGrid</LayoutTitle>
+      <MilksGrid items={milks} />
+
+      <LayoutTitle>SaveBanner</LayoutTitle>
+      <SaveBanner
+        title="Save one banana at the time."
+        image={staticQuery.bananaHand}
+      />
     </Layout>
   )
 }
