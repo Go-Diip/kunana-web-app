@@ -57,7 +57,15 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `none`,
+          quality: 100,
+        },
+      },
+    },
     `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-theme-material-ui`,
