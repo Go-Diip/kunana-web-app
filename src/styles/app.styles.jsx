@@ -165,6 +165,22 @@ const wordpress = css`
 `
 
 export const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: "Gotham-Book";
+    src: url("/fonts/Gotham-Book.otf") format("opentype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Gotham-Medium";
+    src: url("/fonts/Gotham-Medium.otf") format("opentype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Heinrich-Script";
+    src: url("/fonts/Heinrich-Script.otf") format("woff");
+    font-display: swap;
+  }
+  
   img, svg {
     max-width: 100%;
   }
