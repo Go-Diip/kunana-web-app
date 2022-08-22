@@ -25,8 +25,34 @@ const Layouts = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
+      infoImg: file(relativePath: { eq: "info-img.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
     }
   `)
+
+  const infoItems = [
+    {
+      image: staticQuery.infoImg,
+      title: "WASTE",
+      description:
+        "At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint",
+    },
+    {
+      image: staticQuery.infoImg,
+      title: "COMMUNITY",
+      description:
+        "At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint",
+    },
+    {
+      image: staticQuery.infoImg,
+      title: "COMMUNITY",
+      description:
+        "At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint",
+    },
+  ]
 
   return (
     <Layout
@@ -45,7 +71,7 @@ const Layouts = () => {
         productImage={staticQuery.productImage}
       />
       <LayoutTitle>InfoGrid</LayoutTitle>
-      <InfoGrid />
+      <InfoGrid items={infoItems} />
     </Layout>
   )
 }
