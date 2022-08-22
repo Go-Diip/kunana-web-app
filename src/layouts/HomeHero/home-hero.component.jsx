@@ -11,7 +11,6 @@ const HomeHero = ({
   return (
     <S.Wrapper>
       <S.ProductImage img={productImage} />
-
       <S.Background img={backgroundImage}>
         <S.MainContainer>
           <S.LogoImage img={logoImage} />

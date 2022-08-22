@@ -7,7 +7,7 @@ export const WrapperBackground = styled(CustomBgImage)`
 `
 
 export const OverBackground = styled.div`
-  background: linear-gradient(182deg, #ffd100 11%, transparent calc(11% + 2px));
+  background: linear-gradient(182deg, #ffd100 13%, transparent calc(13% + 2px));
   width: 100%;
   height: 100%;
 `
