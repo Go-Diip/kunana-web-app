@@ -41,12 +41,13 @@ export const LogoImage = styled(CustomImage)`
   max-width: 280px;
 `
 
-export const Description = styled.p`
+export const Description = styled.h1`
   text-transform: uppercase;
   color: #46281f;
   font-size: ${({ theme }) => theme.typography.pxToRem(35)};
   line-height: 120%;
   letter-spacing: -0.005em;
+  font-family: ${({ theme }) => theme.fonts.tertiary};
 `
 
 export const Button = styled(CustomButton)`

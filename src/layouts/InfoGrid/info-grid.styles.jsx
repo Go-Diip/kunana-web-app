@@ -13,6 +13,7 @@ export const Wrapper = styled(SectionWrapper)`
 `
 
 export const Title = styled.h3`
+  font-family: ${({ theme }) => theme.fonts.tertiary};
   font-weight: 400;
   font-size: ${({ theme }) => theme.typography.pxToRem(32)};
   line-height: 38px;

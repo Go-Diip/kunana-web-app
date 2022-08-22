@@ -31,6 +31,7 @@ export const ImageGrid = styled(Grid)`
 `
 
 export const Title = styled.h2`
+  font-family: ${({ theme }) => theme.fonts.tertiary};
   font-weight: 400;
   font-size: ${({ theme }) => theme.typography.pxToRem(48)};
   line-height: 58px;
