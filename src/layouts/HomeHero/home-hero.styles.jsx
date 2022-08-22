@@ -2,11 +2,10 @@ import styled from "styled-components"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 import CustomImage from "../../components/custom-image/custom-image.component"
 import CustomButton from "../../components/custom-button/custom-button.component"
-import Play from "../../assets/play-icon.svg"
+import Play from "../../assets/icons/play-icon.svg"
 
 export const Wrapper = styled.section`
-  padding-bottom: 5em;
-  background: linear-gradient(182deg, #ffd100 90%, transparent calc(90% + 2px));
+  background-color: ${({ theme }) => theme.palette.primary.main};
   overflow: visible;
   position: relative;
 `
