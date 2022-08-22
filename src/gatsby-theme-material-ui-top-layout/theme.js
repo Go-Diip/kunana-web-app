@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles"
 
 const theme = createTheme({
-  navHeight: 74,
+  navHeight: 80,
   sectionPadding: "padding-top: 1.5em; padding-bottom: 1.5em;",
   fonts: {
     primary: "DM Sans, sans-serif",
@@ -14,13 +14,13 @@ const theme = createTheme({
     primary: {
       // contrastText: "rgba(0, 0, 0, 0.87)",
       main: "#FFD100",
-      light: "#FFFFFF",
-      dark: "#091118",
+      light: "#FFF6E2",
+      dark: "#5B3529",
     },
     secondary: {
       // contrastText: "rgba(0, 0, 0, 0.87)",
       main: "#261003",
-      light: "#1F1D2F",
+      light: "#3DAC48",
       dark: "#1F1D2F",
     },
     tertiary: {
@@ -29,8 +29,8 @@ const theme = createTheme({
     text: {
       primary: "#261003",
       secondary: "#F26B2A",
-      content: "#000000",
-      tertiary: "#1A2933",
+      content: "#281712",
+      tertiary: "#332900",
       disabled: "#10355A",
       hint: "#10355A",
       light: "#FFFFFF",
