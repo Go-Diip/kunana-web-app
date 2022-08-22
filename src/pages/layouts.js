@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import MiscContent from "../layouts/MiscContent"
 import { LayoutTitle } from "../styles/app.styles"
 import HomeHero from "../layouts/HomeHero"
+import InfoGrid from "../layouts/InfoGrid"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -43,6 +44,8 @@ const Layouts = () => {
         logoImage={staticQuery.logo}
         productImage={staticQuery.productImage}
       />
+      <LayoutTitle>InfoGrid</LayoutTitle>
+      <InfoGrid />
     </Layout>
   )
 }
