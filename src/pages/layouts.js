@@ -15,6 +15,7 @@ import Thumb from "../assets/icons/thumb.svg"
 import Trees from "../assets/icons/trees.svg"
 import SaveBanner from "../layouts/SaveBanner"
 import ProductProperties from "../layouts/ProductProperties"
+import RecipesSlider from "../layouts/RecipesSlider"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -75,6 +76,21 @@ const Layouts = () => {
         }
       }
       proteinImage: file(relativePath: { eq: "protein-background.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      slider1: file(relativePath: { eq: "slide-1.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      slider2: file(relativePath: { eq: "slide-2.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      slider3: file(relativePath: { eq: "slide-3.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -155,6 +171,21 @@ const Layouts = () => {
     },
   ]
 
+  const recipes = [
+    {
+      image: staticQuery.slider1,
+    },
+    {
+      image: staticQuery.slider2,
+    },
+    {
+      image: staticQuery.slider3,
+    },
+    {
+      image: staticQuery.slider3,
+    },
+  ]
+
   return (
     <Layout
       seo={{
@@ -198,6 +229,8 @@ const Layouts = () => {
         proteinImage={staticQuery.proteinImage}
         properties={productProperties}
       />
+      <LayoutTitle>RecipesSlider</LayoutTitle>
+      <RecipesSlider title="healthy Recipes with Kunana" recipes={recipes} />
     </Layout>
   )
 }

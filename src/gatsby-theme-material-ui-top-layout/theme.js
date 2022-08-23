@@ -35,7 +35,7 @@ const theme = createTheme({
       tertiary: "#332900",
       disabled: "#10355A",
       hint: "#10355A",
-      light: "#FFFFFF",
+      light: "#F9F9F9",
     },
     alternate: {
       main: "rgb(247, 249, 250)",
