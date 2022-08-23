@@ -13,6 +13,7 @@ export const Wrapper = styled.section`
 
 export const Background = styled(CustomBgImage)`
   padding-top: 2.5em;
+  padding-bottom: 3.3rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -26,10 +27,11 @@ export const ImageGrid = styled(Grid)`
 `
 
 export const ProductImage = styled(CustomImage)`
-  width: 550px;
+  width: 450px;
   position: absolute;
   z-index: 4;
-  right: -100px;
+  right: -25px;
+  bottom: -160px;
 `
 
 export const MainContainer = styled.div`
@@ -48,12 +50,17 @@ export const Description = styled.h1`
   line-height: 120%;
   letter-spacing: -0.005em;
   font-family: ${({ theme }) => theme.fonts.tertiary};
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 `
 
 export const Button = styled(CustomButton)`
   background-color: #46281f;
   border-radius: 16px;
   padding: 1rem;
+  font-family: ${({ theme }) => theme.fonts.tertiary};
+  font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+  line-height: 24px;
 `
 
 export const PlayIcon = styled(Play)`

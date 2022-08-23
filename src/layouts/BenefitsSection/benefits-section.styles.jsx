@@ -4,6 +4,7 @@ import { Container } from "@mui/material"
 
 export const WrapperBackground = styled(CustomBgImage)`
   background-color: #fff6e2;
+  z-index: unset;
 `
 
 export const OverBackground = styled.div`
