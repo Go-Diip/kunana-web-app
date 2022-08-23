@@ -11,6 +11,8 @@ const BrownBanner = () => {
           We think Imperfect bananas make a pretty perfect drink. We upcycle a
           bunch of them.
         </S.Description>
+
+        <S.StickerResponsive />
       </S.CustomContainer>
     </S.Wrapper>
   )
