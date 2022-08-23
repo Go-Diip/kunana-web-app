@@ -5,7 +5,7 @@ import * as S from "./milks-grid.styles.jsx"
 
 const MilksGrid = ({ items }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="ourMilk">
       <Grid container>
         {items.map(({ image, title, background }, index) => (
           <S.CustomGrid

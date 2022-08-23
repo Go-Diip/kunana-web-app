@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { AppBar } from "@mui/material"
 import HeaderLogo from "../../assets/header-logo.svg"
 import CustomLink from "../custom-link/custom-link.component"
+import { Link } from "react-scroll"
 
 export const Nav = styled(AppBar)`
   background-color: ${({ theme }) => theme.palette.primary.main};
@@ -23,9 +24,9 @@ export const Logo = styled(HeaderLogo)`
 
 export const LinksWrapper = styled.div``
 
-export const Link = styled(CustomLink)`
+export const ScrollLink = styled(Link)`
   padding: 15px;
-  font-weight: 350;
+  font-weight: bold;
   color: #332900;
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   line-height: 100%;
