@@ -34,7 +34,7 @@ const Footer = ({ className }) => {
           </S.LinksWrapper>
         </S.BottomWrapper>
         <S.TermsWrapper>
-          <S.Label>Livekuna 2022</S.Label>
+          <S.Label>Livekuna {new Date().getFullYear()}</S.Label>
           <S.ExternalLink href="https://godiip.com" target="_blank">
             Powered by DIIP
           </S.ExternalLink>
