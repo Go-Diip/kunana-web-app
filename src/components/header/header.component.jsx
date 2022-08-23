@@ -12,7 +12,9 @@ const Header = () => {
             <S.Logo />
           </CustomLink>
           <S.LinksWrapper>
-            <S.Link className="active">Home</S.Link>
+            <S.Link className="active" to="homeHero">
+              Home
+            </S.Link>
             <S.Link>Our Milk</S.Link>
             <S.Link>Our Story</S.Link>
             <S.Link>Benefits</S.Link>

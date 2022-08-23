@@ -25,7 +25,7 @@ export const LinksWrapper = styled.div``
 
 export const Link = styled(CustomLink)`
   padding: 15px;
-  font-weight: 350;
+  font-weight: bold;
   color: #332900;
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   line-height: 100%;

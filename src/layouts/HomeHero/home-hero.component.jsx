@@ -10,7 +10,7 @@ const HomeHero = ({
   description,
 }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="homeHero">
       <S.Background img={backgroundImage} tag="div">
         <Container>
           <Grid container>
