@@ -13,6 +13,7 @@ import MilksGrid from "../layouts/MilksGrid"
 import SaveBanner from "../layouts/SaveBanner"
 import { isBrowser } from "../utils"
 import ProductProperties from "../layouts/ProductProperties"
+import BrownBanner from "../layouts/BrownBanner"
 
 const Index = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -167,6 +168,7 @@ const Index = () => {
         tastyImg={staticQuery.tastyImg}
         benefits={benefits}
       />
+      <BrownBanner />
       <InfoGrid items={infoItems} />
       <SaveBanner
         title="Save one banana at the time."
