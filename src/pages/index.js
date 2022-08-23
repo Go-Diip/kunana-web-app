@@ -14,6 +14,7 @@ import SaveBanner from "../layouts/SaveBanner"
 import { isBrowser } from "../utils"
 import ProductProperties from "../layouts/ProductProperties"
 import BrownBanner from "../layouts/BrownBanner"
+import HelloBanner from "../layouts/HelloBanner"
 
 const Index = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -180,6 +181,7 @@ const Index = () => {
         proteinImage={staticQuery.proteinImage}
         properties={productProperties}
       />
+      <HelloBanner />
     </Layout>
   )
 }
