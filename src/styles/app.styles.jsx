@@ -226,6 +226,6 @@ export const AppContainer = styled.main`
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding-top: ${({ theme }) => theme.navHeight}px;
+  // padding-top: ${({ theme }) => theme.navHeight}px;
   background-color: #f8fdff;
 `
