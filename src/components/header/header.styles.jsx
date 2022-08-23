@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { AppBar } from "@mui/material"
 import HeaderLogo from "../../assets/header-logo.svg"
-import CustomLink from "../custom-link/custom-link.component"
 import { Link } from "react-scroll"
 
 export const Nav = styled(AppBar)`
@@ -47,3 +46,5 @@ export const ScrollLink = styled(Link)`
     border-bottom: 3px solid ${({ theme }) => theme.palette.primary.dark};
   }
 `
+
+export const MobileButton = styled.div``
