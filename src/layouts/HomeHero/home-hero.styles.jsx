@@ -27,11 +27,11 @@ export const ImageGrid = styled(Grid)`
 `
 
 export const ProductImage = styled(CustomImage)`
-  width: 450px;
+  width: 480px;
   position: absolute;
   z-index: 4;
   right: -25px;
-  bottom: -160px;
+  bottom: -210px;
 `
 
 export const MainContainer = styled.div`
