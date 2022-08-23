@@ -6,10 +6,6 @@ export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.palette.primary.main};
 `
 
-export const FlexContainer = styled.div`
-  display: flex;
-`
-
 export const Image = styled(CustomImage)``
 
 export const PointBgImage = styled(CustomBgImage)`
@@ -41,18 +37,28 @@ export const BgImage = styled(CustomBgImage)`
 `
 
 export const Title = styled.h3`
-  font-size: ${({ theme }) => theme.typography.pxToRem(32)};
-  line-height: 38px;
+  font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+  line-height: 29px;
   font-weight: 400;
   letter-spacing: -0.005em;
   color: ${({ theme }) => theme.palette.tertiary.dark};
   font-family: ${({ theme }) => theme.fonts.tertiary};
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(32)};
+    line-height: 38px;
+  }
 `
 
 export const Description = styled.p`
-  font-size: ${({ theme }) => theme.typography.pxToRem(16)};
-  line-height: 25px;
+  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  line-height: 22px;
   font-weight: 325;
   letter-spacing: -0.005em;
   color: ${({ theme }) => theme.palette.tertiary.dark};
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+    line-height: 25px;
+  }
 `

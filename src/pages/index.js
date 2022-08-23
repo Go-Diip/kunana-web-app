@@ -12,6 +12,7 @@ import Trees from "../assets/icons/trees.svg"
 import MilksGrid from "../layouts/MilksGrid"
 import SaveBanner from "../layouts/SaveBanner"
 import { isBrowser } from "../utils"
+import ProductProperties from "../layouts/ProductProperties"
 
 const Index = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -62,6 +63,16 @@ const Index = () => {
         }
       }
       bananaHand: file(relativePath: { eq: "banana-hand.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      milkJug: file(relativePath: { eq: "milk-jug.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      proteinImage: file(relativePath: { eq: "protein-background.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -124,6 +135,24 @@ const Index = () => {
     },
   ]
 
+  const productProperties = [
+    {
+      title: "use with just about anything",
+      description:
+        "cereal, coffee, maybe even to dunk french fries in? We’re not judging, go ahead and go bananas.",
+    },
+    {
+      title: "Low in sugar, high in amazing",
+      description:
+        "Just as nutritious as other non-dairy milks. But with BANANAS.",
+    },
+    {
+      title: "Low in sugar, high in amazing",
+      description:
+        "Just as nutritious as other non-dairy milks. But with BANANAS.",
+    },
+  ]
+
   return (
     <Layout
       seo={{ title: "Kunana - Plant-based milk made FROM UP-CYCLED BANANAS" }}
@@ -144,6 +173,11 @@ const Index = () => {
         image={staticQuery.bananaHand}
       />
       <MilksGrid items={milks} />
+      <ProductProperties
+        productImage={staticQuery.milkJug}
+        proteinImage={staticQuery.proteinImage}
+        properties={productProperties}
+      />
     </Layout>
   )
 }

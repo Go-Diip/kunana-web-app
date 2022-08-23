@@ -1,8 +1,8 @@
 import React from "react"
-
-import * as S from "./product-properties.styles.jsx"
 import { Grid } from "@mui/material"
 import { graphql, useStaticQuery } from "gatsby"
+
+import * as S from "./product-properties.styles.jsx"
 
 const ProductProperties = ({ productImage, proteinImage, properties }) => {
   const staticQuery = useStaticQuery(graphql`
@@ -18,7 +18,6 @@ const ProductProperties = ({ productImage, proteinImage, properties }) => {
   if (!properties) return null
   return (
     <S.Wrapper>
-      {/* <S.FlexContainer>*/}
       <Grid container>
         <Grid item xs={12} md={5}>
           <S.Image img={productImage} />
@@ -36,7 +35,6 @@ const ProductProperties = ({ productImage, proteinImage, properties }) => {
           </S.PointBgImage>
         </Grid>
       </Grid>
-      {/*</S.FlexContainer>*/}
     </S.Wrapper>
   )
 }
