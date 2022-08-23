@@ -15,6 +15,22 @@ export const Wrapper = styled(SectionWrapper)`
     padding-top: 2.8rem;
     padding-bottom: 5.8rem;
   }
+
+  .swiper {
+    width: 100%;
+    padding: 1.5rem 5rem;
+    display: block;
+    overflow: visible;
+
+    @media (min-width: 400px) {
+      padding: 2.5rem 8rem;
+    }
+
+    ${({ theme }) => theme.breakpoints.up("sm")} {
+      padding: 0;
+      overflow: hidden;
+    }
+  }
 `
 
 export const ContentGrid = styled(Grid)`
@@ -41,6 +57,11 @@ export const Title = styled.h2`
   }
 `
 
+export const ButtonGrid = styled(Grid)`
+  display: flex;
+  justify-content: center;
+`
+
 export const Button = styled(CustomButton)`
   color: ${({ theme }) => theme.palette.tertiary.dark};
   font-weight: 500;
@@ -50,21 +71,15 @@ export const Button = styled(CustomButton)`
   border-radius: 100px;
   padding: 0.75rem 5.1rem;
 
-  ${({ theme }) => theme.breakpoints.up("sm")} {
+  ${({ theme }) => theme.breakpoints.up("md")} {
     padding: 1.3rem 4.6rem;
     font-size: ${({ theme }) => theme.typography.pxToRem(16)};
   }
 `
 
-export const CustomSlider = styled(Slider)``
-
 export const SlideItem = styled.div`
-  max-width: 180px;
+  max-width: 290px;
   width: 100%;
-  ${({ theme }) => theme.breakpoints.up("sm")} {
-    max-width: 290px;
-    width: 100%;
-  }
 `
 
 export const SlideImage = styled(CustomImage)`
