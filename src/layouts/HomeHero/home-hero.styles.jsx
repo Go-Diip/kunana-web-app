@@ -19,6 +19,14 @@ export const Background = styled(CustomBgImage)`
   display: flex;
   justify-content: center;
   overflow: visible;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .gatsby-image-wrapper {
+    }
+  }
 `
 
 export const ImageGrid = styled(Grid)`
@@ -27,7 +35,8 @@ export const ImageGrid = styled(Grid)`
 `
 
 export const ProductImage = styled(CustomImage)`
-  width: 480px;
+  max-width: 480px;
+  width: 100%;
   position: absolute;
   z-index: 4;
   right: -25px;
@@ -41,17 +50,23 @@ export const MainContainer = styled.div`
 
 export const LogoImage = styled(CustomImage)`
   max-width: 280px;
+  width: 100%;
 `
 
 export const Description = styled.h1`
   text-transform: uppercase;
   color: #46281f;
-  font-size: ${({ theme }) => theme.typography.pxToRem(35)};
+  font-size: ${({ theme }) => theme.typography.pxToRem(18)};
   line-height: 120%;
   letter-spacing: -0.005em;
   font-family: ${({ theme }) => theme.fonts.tertiary};
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(35)};
+    line-height: 120%;
+  }
 `
 
 export const Button = styled(CustomButton)`
@@ -59,8 +74,13 @@ export const Button = styled(CustomButton)`
   border-radius: 16px;
   padding: 1rem;
   font-family: ${({ theme }) => theme.fonts.tertiary};
-  font-size: ${({ theme }) => theme.typography.pxToRem(24)};
-  line-height: 24px;
+  font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+  line-height: 16px;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    line-height: 24px;
+  }
 `
 
 export const PlayIcon = styled(Play)`
