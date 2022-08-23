@@ -1,11 +1,20 @@
 import React from "react"
 import * as S from "./header.styles.jsx"
-import { Container } from "@mui/material"
+import { Container, useScrollTrigger } from "@mui/material"
 import CustomLink from "../custom-link/custom-link.component"
 
 const Header = () => {
+  const scrollTrigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 100,
+  })
+
   return (
-    <S.Nav position="fixed" elevation={0}>
+    <S.Nav
+      position="fixed"
+      isDark={scrollTrigger}
+      elevation={scrollTrigger ? 4 : 0}
+    >
       <Container maxWidth="xl" style={{ height: "100%" }}>
         <S.Wrapper>
           <CustomLink url="/" style={{ display: "flex" }}>

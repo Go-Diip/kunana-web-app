@@ -5,8 +5,18 @@ import CustomLink from "../custom-link/custom-link.component"
 import { Link } from "react-scroll"
 
 export const Nav = styled(AppBar)`
-  background-color: ${({ theme }) => theme.palette.primary.main};
+  //background-color: ${({ theme }) => theme.palette.primary.main};
   height: ${({ theme }) => theme.navHeight}px;
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    ${({ theme, isDark }) =>
+      isDark
+        ? `
+    background-color: ${theme.palette.primary.main};
+   `
+        : `
+    background-color: transparent;
+   `};
+  }
 `
 
 export const Wrapper = styled.div`
