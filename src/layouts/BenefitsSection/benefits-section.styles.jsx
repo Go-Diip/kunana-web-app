@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 import { Container } from "@mui/material"
+import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const WrapperBackground = styled(CustomBgImage)`
   background-color: #fff6e2;
@@ -8,7 +9,7 @@ export const WrapperBackground = styled(CustomBgImage)`
 `
 
 export const OverBackground = styled.div`
-  background: linear-gradient(190deg, #ffd100 10%, transparent calc(10% + 2px));
+  background: linear-gradient(187deg, #ffd100 10%, transparent calc(10% + 2px));
   width: 100%;
   height: 100%;
 
@@ -21,9 +22,34 @@ export const OverBackground = styled.div`
   }
 `
 
+export const Image = styled(CustomImage)`
+  max-width: 190px;
+  width: 100%;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    max-width: 210px;
+  }
+
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    max-width: 240px;
+  }
+`
+
 export const CustomContainer = styled(Container)`
-  padding-top: 4em;
+  padding-top: 5em;
   padding-bottom: 3em;
+
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    .MuiGrid-root {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-top: 6em;
+    padding-bottom: 1em;
+  }
 `
 
 export const BenefitItem = styled.div`
@@ -36,6 +62,10 @@ export const BenefitItem = styled.div`
 
   svg {
     width: 40px;
+  }
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    margin-bottom: 2rem;
   }
 `
 
