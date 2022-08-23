@@ -2,6 +2,7 @@ import React from "react"
 import * as S from "./hello-banner.styles"
 import { Container, Grid } from "@mui/material"
 import Banana from "../../assets/banana-gafas.svg"
+import CustomButton from "../../components/custom-button/custom-button.component"
 
 const HelloBanner = () => {
   return (
@@ -23,6 +24,16 @@ const HelloBanner = () => {
           </Grid>
         </Grid>
       </Container>
+      <S.GreenBanner>
+        <S.GreenSection />
+        <S.CustomBottomContainer>
+          <S.CustomPalm />
+          <S.ContactTitle>
+            Something good for yourself and the environment.
+          </S.ContactTitle>
+          <CustomButton className="yellow">Contact Us</CustomButton>
+        </S.CustomBottomContainer>
+      </S.GreenBanner>
     </S.Wrapper>
   )
 }

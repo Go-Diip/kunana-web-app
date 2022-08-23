@@ -13,7 +13,7 @@ export const CustomButton = styled(Button)`
   border: 1px solid transparent;
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   font-weight: 600 !important;
-  border-radius: 4px;
+  border-radius: 50px;
 
   ${({ theme }) => theme.breakpoints.up("md")} {
     padding: 0.5em 3em;
@@ -37,6 +37,7 @@ export const CustomButton = styled(Button)`
   }
 
   &.yellow {
+    color: #46281f;
     background-color: #ffd100;
     &:hover {
       background-color: #e1b800;
