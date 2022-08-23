@@ -45,6 +45,7 @@ export const ExternalLink = styled.a`
   transition: 0.3s all ease;
   color: #332900;
   border-bottom: 3px solid transparent;
+  padding-bottom: 3px;
   &:hover {
     border-bottom: 3px solid ${({ theme }) => theme.palette.primary.dark};
   }

@@ -12,18 +12,23 @@ const Header = () => {
             <S.Logo />
           </CustomLink>
           <S.LinksWrapper>
+            <S.ScrollLink spy={true} smooth={true} offset={-100} to="homeHero">
+              Home
+            </S.ScrollLink>
+            <S.ScrollLink spy={true} smooth={true} offset={-100} to="ourMilk">
+              Our Milk
+            </S.ScrollLink>
+            <S.ScrollLink spy={true} offset={-100} smooth={true} to="ourStory">
+              Our Story
+            </S.ScrollLink>
             <S.ScrollLink
               spy={true}
               smooth={true}
               offset={-100}
-              className="active"
-              to="homeHero"
+              to="ourBenefits"
             >
-              Home
+              Benefits
             </S.ScrollLink>
-            <S.ScrollLink>Our Milk</S.ScrollLink>
-            <S.ScrollLink>Our Story</S.ScrollLink>
-            <S.ScrollLink>Benefits</S.ScrollLink>
           </S.LinksWrapper>
         </S.Wrapper>
       </Container>

@@ -25,6 +25,7 @@ export const Logo = styled(HeaderLogo)`
 export const LinksWrapper = styled.div``
 
 export const ScrollLink = styled(Link)`
+  cursor: pointer;
   padding: 15px;
   font-weight: bold;
   color: #332900;
