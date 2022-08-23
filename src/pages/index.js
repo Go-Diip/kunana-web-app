@@ -50,17 +50,17 @@ const Index = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      greenMilk: file(relativePath: { eq: "green-milk.png" }) {
+      greenMilk: file(relativePath: { eq: "verde.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      blueMilk: file(relativePath: { eq: "blue-milk.png" }) {
+      blueMilk: file(relativePath: { eq: "azul.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      browMilk: file(relativePath: { eq: "brow-milk.png" }) {
+      browMilk: file(relativePath: { eq: "cafe.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
