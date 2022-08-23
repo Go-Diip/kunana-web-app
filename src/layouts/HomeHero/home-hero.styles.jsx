@@ -77,6 +77,10 @@ export const Button = styled(CustomButton)`
   font-size: ${({ theme }) => theme.typography.pxToRem(16)};
   line-height: 16px;
 
+  &:hover {
+    background-color: #715852;
+  }
+
   ${({ theme }) => theme.breakpoints.up("sm")} {
     font-size: ${({ theme }) => theme.typography.pxToRem(24)};
     line-height: 24px;

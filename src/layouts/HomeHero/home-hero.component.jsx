@@ -23,7 +23,7 @@ const HomeHero = ({
                 <S.Description>
                   Plant-based milk made FROM UP-CYCLED BANANAS
                 </S.Description>
-                <S.Button>
+                <S.Button className="hero">
                   watch our story <S.PlayIcon />{" "}
                 </S.Button>
               </S.MainContainer>

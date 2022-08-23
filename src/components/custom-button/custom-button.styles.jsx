@@ -23,6 +23,26 @@ export const CustomButton = styled(Button)`
     color: ${({ theme }) => theme.palette.primary.main};
   }
 
+  &.hero {
+    &:hover {
+      background-color: #715852;
+    }
+  }
+
+  &.brown {
+    background-color: #5b3529;
+    &:hover {
+      background-color: #715852;
+    }
+  }
+
+  &.yellow {
+    background-color: #ffd100;
+    &:hover {
+      background-color: #e1b800;
+    }
+  }
+
   &.darkBorder {
     color: black;
     border: 1px black solid;
@@ -40,7 +60,7 @@ export const CustomButton = styled(Button)`
     background-color: transparent;
   }
 
-  &:not(.light):not(.darkBorder):hover {
+  &:not(.light):not(.darkBorder):not(.hero):not(.brown):not(.yellow):hover {
     background-color: ${({ theme, color }) =>
       darken(
         theme.palette[color]
