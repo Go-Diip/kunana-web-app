@@ -15,6 +15,7 @@ import { isBrowser } from "../utils"
 import ProductProperties from "../layouts/ProductProperties"
 import BrownBanner from "../layouts/BrownBanner"
 import HelloBanner from "../layouts/HelloBanner"
+import RecipesSlider from "../layouts/RecipesSlider"
 
 const Index = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -75,6 +76,21 @@ const Index = () => {
         }
       }
       proteinImage: file(relativePath: { eq: "protein-background.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      slider1: file(relativePath: { eq: "slide-1.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      slider2: file(relativePath: { eq: "slide-2.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      slider3: file(relativePath: { eq: "slide-3.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -155,6 +171,18 @@ const Index = () => {
     },
   ]
 
+  const recipes = [
+    {
+      image: staticQuery.slider1,
+    },
+    {
+      image: staticQuery.slider2,
+    },
+    {
+      image: staticQuery.slider3,
+    },
+  ]
+
   return (
     <Layout
       seo={{ title: "Kunana - Plant-based milk made FROM UP-CYCLED BANANAS" }}
@@ -181,6 +209,8 @@ const Index = () => {
         proteinImage={staticQuery.proteinImage}
         properties={productProperties}
       />
+      <RecipesSlider title="healthy Recipes with Kunana" recipes={recipes} />
+
       <HelloBanner />
     </Layout>
   )

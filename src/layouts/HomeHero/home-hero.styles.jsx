@@ -9,6 +9,8 @@ export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.palette.primary.main};
   overflow: visible;
   position: relative;
+
+  padding-top: 5rem;
 `
 
 export const Background = styled(CustomBgImage)`
@@ -22,7 +24,7 @@ export const Background = styled(CustomBgImage)`
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 1rem;
 
     .gatsby-image-wrapper {
     }
@@ -40,7 +42,12 @@ export const ProductImage = styled(CustomImage)`
   position: absolute;
   z-index: 4;
   right: -25px;
-  bottom: -210px;
+  bottom: -220px;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    bottom: -150px;
+    width: 263px;
+  }
 `
 
 export const MainContainer = styled.div`

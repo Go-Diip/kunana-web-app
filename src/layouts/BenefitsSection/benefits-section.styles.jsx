@@ -8,9 +8,17 @@ export const WrapperBackground = styled(CustomBgImage)`
 `
 
 export const OverBackground = styled.div`
-  background: linear-gradient(182deg, #ffd100 13%, transparent calc(13% + 2px));
+  background: linear-gradient(190deg, #ffd100 10%, transparent calc(10% + 2px));
   width: 100%;
   height: 100%;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    background: linear-gradient(
+      182deg,
+      #ffd100 13%,
+      transparent calc(13% + 2px)
+    );
+  }
 `
 
 export const CustomContainer = styled(Container)`
