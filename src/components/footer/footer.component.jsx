@@ -27,10 +27,38 @@ const Footer = ({ className }) => {
             </S.ExternalLink>
           </S.SocialIconsWrapper>
           <S.LinksWrapper>
-            <S.CustomScrollLink>Home</S.CustomScrollLink>
-            <S.CustomScrollLink>Our Milk</S.CustomScrollLink>
-            <S.CustomScrollLink>Our Story</S.CustomScrollLink>
-            <S.CustomScrollLink>Our Benefits</S.CustomScrollLink>
+            <S.CustomScrollLink
+              spy={true}
+              smooth={true}
+              offset={-100}
+              to="homeHero"
+            >
+              Home
+            </S.CustomScrollLink>
+            <S.CustomScrollLink
+              spy={true}
+              smooth={true}
+              offset={-100}
+              to="ourMilk"
+            >
+              Our Milk
+            </S.CustomScrollLink>
+            <S.CustomScrollLink
+              spy={true}
+              offset={-100}
+              smooth={true}
+              to="ourStory"
+            >
+              Our Story
+            </S.CustomScrollLink>
+            <S.CustomScrollLink
+              spy={true}
+              smooth={true}
+              offset={-100}
+              to="ourBenefits"
+            >
+              Our Benefits
+            </S.CustomScrollLink>
           </S.LinksWrapper>
         </S.BottomWrapper>
         <S.TermsWrapper>

@@ -51,6 +51,7 @@ export const ExternalLink = styled.a`
 `
 
 export const CustomScrollLink = styled(Link)`
+  cursor: pointer;
   transition: 0.3s all ease;
   border-bottom: 3px solid transparent;
   &:hover {

@@ -17,7 +17,7 @@ const ProductProperties = ({ productImage, proteinImage, properties }) => {
 
   if (!properties) return null
   return (
-    <S.Wrapper>
+    <S.Wrapper id="ourBenefits">
       <Grid container>
         <Grid item xs={12} md={5}>
           <S.Image img={productImage} />

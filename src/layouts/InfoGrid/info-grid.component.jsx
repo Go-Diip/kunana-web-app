@@ -7,7 +7,7 @@ import * as S from "./info-grid.styles.jsx"
 const InfoGrid = ({ items }) => {
   if (!items) return null
   return (
-    <S.Wrapper contained>
+    <S.Wrapper contained id="ourStory">
       {items.map(({ image, title, description }, index) => (
         <S.CustomGrid
           container
