@@ -15,18 +15,28 @@ export const Wrapper = styled(SectionWrapper)`
 export const Title = styled.h3`
   font-family: ${({ theme }) => theme.fonts.tertiary};
   font-weight: 400;
-  font-size: ${({ theme }) => theme.typography.pxToRem(32)};
-  line-height: 38px;
+  font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+  line-height: 29px;
   letter-spacing: -0.005em;
   color: #46281f;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(32)};
+    line-height: 38px;
+  }
 `
 
 export const Description = styled.p`
   font-weight: 325;
-  font-size: ${({ theme }) => theme.typography.pxToRem(16)};
-  line-height: 29px;
+  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  line-height: 25px;
   letter-spacing: -0.005em;
   color: #281712;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+    line-height: 29px;
+  }
 `
 
 export const CustomGrid = styled(Grid)`
