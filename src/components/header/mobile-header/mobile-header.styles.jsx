@@ -30,16 +30,15 @@ export const LinksWrapper = styled(Box)`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  gap: 4rem;
   height: 100%;
 `
 
 export const ScrollLink = styled(Link)`
-  cursor: pointer;
-  padding: 15px;
-  font-weight: bold;
-  color: #332900;
-  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  font-weight: 400;
   line-height: 100%;
+  color: #332900;
+  font-size: ${({ theme }) => theme.typography.pxToRem(18)};
   transition: 0.3s all ease;
   border-bottom: 3px solid transparent;
   &:hover {

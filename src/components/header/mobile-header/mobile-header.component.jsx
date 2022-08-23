@@ -14,12 +14,10 @@ const MobileHeader = ({
   handleClose,
 }) => {
   const height = use100vh()
-  // const location = useLocation()
   const theme = useTheme()
   const wrapperHeight = height
     ? `${height - theme.navHeight}px`
     : `calc(100vh - ${theme.navHeight}px)`
-  // const hightlightLink = location.pathname
 
   const removeSlash = string => {
     return string.replace("/", "")
