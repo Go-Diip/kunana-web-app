@@ -14,6 +14,7 @@ import Plant from "../assets/icons/plant.svg"
 import Thumb from "../assets/icons/thumb.svg"
 import Trees from "../assets/icons/trees.svg"
 import SaveBanner from "../layouts/SaveBanner"
+import ProductProperties from "../layouts/ProductProperties"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -64,6 +65,16 @@ const Layouts = () => {
         }
       }
       bananaHand: file(relativePath: { eq: "banana-hand.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      milkJug: file(relativePath: { eq: "milk-jug.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      proteinImage: file(relativePath: { eq: "protein-background.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -154,13 +165,19 @@ const Layouts = () => {
       <LayoutTitle>InfoGrid</LayoutTitle>
       <InfoGrid items={infoItems} />
 
-      <LayoutTitle>MilksGrid</LayoutTitle>
-      <MilksGrid items={milks} />
-
       <LayoutTitle>SaveBanner</LayoutTitle>
       <SaveBanner
         title="Save one banana at the time."
         image={staticQuery.bananaHand}
+      />
+
+      <LayoutTitle>MilksGrid</LayoutTitle>
+      <MilksGrid items={milks} />
+
+      <LayoutTitle>ProductProperties</LayoutTitle>
+      <ProductProperties
+        productImage={staticQuery.milkJug}
+        proteinImage={staticQuery.proteinImage}
       />
     </Layout>
   )
