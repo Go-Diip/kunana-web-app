@@ -137,6 +137,24 @@ const Layouts = () => {
     },
   ]
 
+  const productProperties = [
+    {
+      title: "use with just about anything",
+      description:
+        "cereal, coffee, maybe even to dunk french fries in? We’re not judging, go ahead and go bananas.",
+    },
+    {
+      title: "Low in sugar, high in amazing",
+      description:
+        "Just as nutritious as other non-dairy milks. But with BANANAS.",
+    },
+    {
+      title: "Low in sugar, high in amazing",
+      description:
+        "Just as nutritious as other non-dairy milks. But with BANANAS.",
+    },
+  ]
+
   return (
     <Layout
       seo={{
@@ -178,6 +196,7 @@ const Layouts = () => {
       <ProductProperties
         productImage={staticQuery.milkJug}
         proteinImage={staticQuery.proteinImage}
+        properties={productProperties}
       />
     </Layout>
   )

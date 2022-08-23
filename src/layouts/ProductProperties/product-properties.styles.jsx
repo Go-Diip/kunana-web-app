@@ -10,13 +10,49 @@ export const FlexContainer = styled.div`
   display: flex;
 `
 
-export const Image = styled(CustomImage)`
+export const Image = styled(CustomImage)``
+
+export const PointBgImage = styled(CustomBgImage)`
   width: 100%;
-  max-width: 634px;
+  height: 100%;
 `
 
 export const BgImage = styled(CustomBgImage)`
-  width: 515px;
+  max-width: 530px;
 
+  width: 100%;
   height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+
+  ${({ theme }) => theme.breakpoints.down("xl")} {
+    img {
+      object-fit: contain !important;
+    }
+  }
+
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding: 3.8rem 1rem;
+  }
+`
+
+export const Title = styled.h3`
+  font-size: ${({ theme }) => theme.typography.pxToRem(32)};
+  line-height: 38px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: ${({ theme }) => theme.palette.tertiary.dark};
+  font-family: ${({ theme }) => theme.fonts.tertiary};
+`
+
+export const Description = styled.p`
+  font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+  line-height: 25px;
+  font-weight: 325;
+  letter-spacing: -0.005em;
+  color: ${({ theme }) => theme.palette.tertiary.dark};
 `
