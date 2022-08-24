@@ -17,7 +17,7 @@ const HomeHero = ({
   return (
     <S.Wrapper id="homeHero">
       <S.Background img={backgroundImage} tag="div">
-        <Container>
+        <S.CustomContainer>
           <Grid container>
             <S.ImageGrid item xs={7} md={6}>
               <S.ProductImage img={productImage} />
@@ -34,7 +34,7 @@ const HomeHero = ({
               </S.MainContainer>
             </Grid>
           </Grid>
-        </Container>
+        </S.CustomContainer>
       </S.Background>
       <LoadableModalVideo
         channel="youtube"

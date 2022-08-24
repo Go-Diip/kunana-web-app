@@ -4,13 +4,15 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 import CustomButton from "../../components/custom-button/custom-button.component"
 import Play from "../../assets/icons/play-icon.svg"
 import { Grid } from "@mui/material"
+import Container from "@mui/material/Container"
 
 export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.palette.primary.main};
   overflow: visible;
   position: relative;
-
-  padding-top: 5rem;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-top: 5rem;
+  }
 `
 
 export const Background = styled(CustomBgImage)`
@@ -28,6 +30,13 @@ export const Background = styled(CustomBgImage)`
 
     .gatsby-image-wrapper {
     }
+  }
+`
+
+export const CustomContainer = styled(Container)`
+  padding-top: 4rem;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-top: 0;
   }
 `
 
