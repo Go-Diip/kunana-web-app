@@ -16,6 +16,7 @@ const HomeHero = ({
 
   return (
     <S.Wrapper id="homeHero">
+      <h1 class="visuallyhidden">Kunana</h1>
       <S.Background img={backgroundImage} tag="div">
         <S.CustomContainer>
           <Grid container>

@@ -5,6 +5,7 @@ import CustomButton from "../../components/custom-button/custom-button.component
 import Play from "../../assets/icons/play-icon.svg"
 import { Grid } from "@mui/material"
 import Container from "@mui/material/Container"
+import Typography from "@mui/material/Typography"
 
 export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.palette.primary.main};
@@ -69,7 +70,7 @@ export const LogoImage = styled(CustomImage)`
   width: 100%;
 `
 
-export const Description = styled.h1`
+export const Description = styled(Typography)`
   text-transform: uppercase;
   color: #46281f;
   font-size: ${({ theme }) => theme.typography.pxToRem(18)};
