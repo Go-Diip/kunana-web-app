@@ -38,9 +38,6 @@ const Header = () => {
               >
                 Home
               </S.ScrollLink>
-              <S.ScrollLink spy={true} smooth={true} offset={-100} to="ourMilk">
-                Our Milk
-              </S.ScrollLink>
               <S.ScrollLink
                 spy={true}
                 offset={-100}
@@ -48,6 +45,9 @@ const Header = () => {
                 to="ourStory"
               >
                 Our Story
+              </S.ScrollLink>
+              <S.ScrollLink spy={true} smooth={true} offset={-100} to="ourMilk">
+                Our Milk
               </S.ScrollLink>
               <S.ScrollLink
                 spy={true}
