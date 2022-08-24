@@ -69,6 +69,7 @@ export const MainContainer = styled.div`
 export const LogoImage = styled(LogoHero)`
   max-width: 280px;
   width: 100%;
+  height: auto;
 `
 
 export const Description = styled(Typography)`
