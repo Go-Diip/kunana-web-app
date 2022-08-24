@@ -39,7 +39,7 @@ const HomeHero = ({
       <LoadableModalVideo
         channel="youtube"
         isOpen={isOpen}
-        videoId="SJeBRW1QQMA"
+        videoId="mtstgBB4XeA"
         autoplay={1}
         onClose={() => setIsOpen(false)}
       />
