@@ -60,6 +60,10 @@ export const CustomForm = styled.form`
 export const Input = styled(CustomInput)`
   position: relative;
 
+  .MuiInput-underline:before {
+    border-bottom-color: #46281f !important;
+  }
+
   .MuiFormHelperText-root {
     position: absolute;
     bottom: -30px;
