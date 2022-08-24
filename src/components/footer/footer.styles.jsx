@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import Logo from "../../assets/header-logo.svg"
 import { Link } from "react-scroll"
+import CustomInput from "../custom-input/custom-input.component"
+import CustomButton from "../custom-button/custom-button.component"
 
 export const Wrapper = styled.footer`
   //color: white;
@@ -20,9 +22,46 @@ export const TopWrapper = styled.div`
   justify-content: space-between;
 `
 
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+export const FooterTitle = styled.h3`
+  font-weight: 400;
+  font-size: ${({ theme }) => theme.typography.pxToRem(40)};
+  line-height: 120%;
+  max-width: 635px;
+  width: 100%;
+  font-family: ${({ theme }) => theme.fonts.tertiary};
+`
+
+export const CustomForm = styled.form`
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+`
+
+export const Input = styled(CustomInput)`
+  position: relative;
+
+  .MuiFormHelperText-root {
+    position: absolute;
+    bottom: -30px;
+  }
+`
+
+export const SubmitButton = styled(CustomButton)`
+  position: absolute;
+  right: 0;
+  top: -0.7rem;
+  padding: 0.5rem 1rem;
+`
+
 export const FooterLogo = styled(Logo)`
-  width: 121px;
-  height: 170px;
+  width: 140px;
+  height: 190px;
 `
 
 export const BottomWrapper = styled.div`
