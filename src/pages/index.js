@@ -185,7 +185,10 @@ const Index = () => {
 
   return (
     <Layout
-      seo={{ title: "Kunana - Plant-based milk made FROM UP-CYCLED BANANAS" }}
+      seo={{
+        title: "Kunana",
+        metaDesc: "Plant-based milk made FROM UP-CYCLED BANANA",
+      }}
     >
       <HomeHero
         backgroundImage={staticQuery.backgroundImage}
