@@ -6,6 +6,7 @@ import Play from "../../assets/icons/play-icon.svg"
 import { Grid } from "@mui/material"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
+import LogoHero from "../../assets/logo-hero.svg"
 
 export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.palette.primary.main};
@@ -65,7 +66,7 @@ export const MainContainer = styled.div`
   overflow: visible;
 `
 
-export const LogoImage = styled(CustomImage)`
+export const LogoImage = styled(LogoHero)`
   max-width: 280px;
   width: 100%;
 `

@@ -25,7 +25,7 @@ const HomeHero = ({
             </S.ImageGrid>
             <Grid item xs={5} md={6}>
               <S.MainContainer>
-                <S.LogoImage img={logoImage} />
+                <S.LogoImage />
                 <S.Description>
                   Plant-based milk made FROM UP-CYCLED BANANAS
                 </S.Description>
