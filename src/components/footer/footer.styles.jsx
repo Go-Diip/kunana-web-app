@@ -20,6 +20,11 @@ export const Wrapper = styled.footer`
 export const TopWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+  }
 `
 
 export const InputWrapper = styled.div`
@@ -35,6 +40,14 @@ export const FooterTitle = styled.h3`
   max-width: 635px;
   width: 100%;
   font-family: ${({ theme }) => theme.fonts.tertiary};
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    max-width: unset;
+    text-align: center;
+    margin-bottom: 33px;
+  }
 `
 
 export const CustomForm = styled.form`
@@ -55,8 +68,12 @@ export const Input = styled(CustomInput)`
 export const SubmitButton = styled(CustomButton)`
   position: absolute;
   right: 0;
-  top: -0.7rem;
+  top: -0.2rem;
   padding: 0.5rem 1rem;
+  text-transform: lowercase;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    top: 0;
+  }
 `
 
 export const FooterLogo = styled(Logo)`
@@ -70,6 +87,12 @@ export const BottomWrapper = styled.div`
   margin-top: 4rem;
   border-bottom: 1px solid #bb9900;
   padding-bottom: 2rem;
+
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 42px;
+  }
 `
 
 export const SocialIconsWrapper = styled.div`
@@ -96,6 +119,11 @@ export const CustomScrollLink = styled(Link)`
   border-bottom: 3px solid transparent;
   &:hover {
     border-bottom: 3px solid ${({ theme }) => theme.palette.primary.dark};
+  }
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
   }
 `
 
