@@ -83,19 +83,19 @@ const Footer = ({ className }) => {
             </S.CustomScrollLink>
             <S.CustomScrollLink
               spy={true}
-              smooth={true}
-              offset={-100}
-              to="ourMilk"
-            >
-              Our Milk
-            </S.CustomScrollLink>
-            <S.CustomScrollLink
-              spy={true}
               offset={-100}
               smooth={true}
               to="ourStory"
             >
               Our Story
+            </S.CustomScrollLink>
+            <S.CustomScrollLink
+              spy={true}
+              smooth={true}
+              offset={-100}
+              to="ourMilk"
+            >
+              Our Milk
             </S.CustomScrollLink>
             <S.CustomScrollLink
               spy={true}
