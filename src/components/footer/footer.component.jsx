@@ -74,6 +74,7 @@ const Footer = ({ className }) => {
           </S.SocialIconsWrapper>
           <S.LinksWrapper>
             <S.CustomScrollLink
+              href="#homeHero"
               spy={true}
               smooth={true}
               offset={-100}
@@ -82,6 +83,7 @@ const Footer = ({ className }) => {
               Home
             </S.CustomScrollLink>
             <S.CustomScrollLink
+              href="#ourStory"
               spy={true}
               offset={-100}
               smooth={true}
@@ -90,6 +92,7 @@ const Footer = ({ className }) => {
               Our Story
             </S.CustomScrollLink>
             <S.CustomScrollLink
+              href="#ourMilk"
               spy={true}
               smooth={true}
               offset={-100}
@@ -99,6 +102,7 @@ const Footer = ({ className }) => {
             </S.CustomScrollLink>
             <S.CustomScrollLink
               spy={true}
+              href="#ourBenefits"
               smooth={true}
               offset={-100}
               to="ourBenefits"

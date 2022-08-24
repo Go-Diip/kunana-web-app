@@ -146,7 +146,9 @@ export const CustomScrollLink = styled(Link)`
   border-bottom: 3px solid transparent;
   font-weight: bold;
   font-size: 14px;
+  text-decoration: none;
   line-height: 100%;
+  color: ${({ theme }) => theme.palette.secondary.main};
   &:hover {
     border-bottom: 3px solid ${({ theme }) => theme.palette.primary.dark};
   }
