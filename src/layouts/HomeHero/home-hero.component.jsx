@@ -21,7 +21,11 @@ const HomeHero = ({
         <S.CustomContainer>
           <Grid container>
             <S.ImageGrid item xs={7} md={6}>
-              <S.ProductImage img={productImage} />
+              <S.ProductImage
+                loading="eager"
+                img={productImage}
+                alt="Kunana milk"
+              />
             </S.ImageGrid>
             <Grid item xs={5} md={6}>
               <S.MainContainer>
