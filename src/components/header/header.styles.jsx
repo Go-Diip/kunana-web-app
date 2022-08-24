@@ -37,6 +37,7 @@ export const ScrollLink = styled(Link)`
   cursor: pointer;
   padding: 15px;
   font-weight: bold;
+  text-decoration: none;
   color: #332900;
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   line-height: 100%;
