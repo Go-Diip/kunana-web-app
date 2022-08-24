@@ -24,6 +24,7 @@ const HomeHero = ({
               <S.ProductImage img={productImage} />
             </S.ImageGrid>
             <Grid item xs={5} md={6}>
+              Fav-2.png
               <S.MainContainer>
                 <S.LogoImage img={logoImage} />
                 <S.Description>
