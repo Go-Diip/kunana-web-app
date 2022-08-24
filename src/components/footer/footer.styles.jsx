@@ -111,18 +111,23 @@ export const ExternalLink = styled.a`
   &:hover {
     border-bottom: 3px solid ${({ theme }) => theme.palette.primary.dark};
   }
+  &.diip {
+    font-size: 12px;
+    line-height: 100%;
+  }
 `
 
 export const CustomScrollLink = styled(Link)`
   cursor: pointer;
   transition: 0.3s all ease;
   border-bottom: 3px solid transparent;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 100%;
   &:hover {
     border-bottom: 3px solid ${({ theme }) => theme.palette.primary.dark};
   }
   ${({ theme }) => theme.breakpoints.down("md")} {
-    font-size: 14px;
-    line-height: 100%;
     text-align: center;
   }
 `
@@ -140,4 +145,7 @@ export const TermsWrapper = styled.div`
   margin-top: 2rem;
 `
 
-export const Label = styled.span``
+export const Label = styled.span`
+  font-size: 12px;
+  line-height: 100%;
+`

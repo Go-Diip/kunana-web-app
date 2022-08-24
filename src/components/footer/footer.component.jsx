@@ -97,7 +97,11 @@ const Footer = ({ className }) => {
         </S.BottomWrapper>
         <S.TermsWrapper>
           <S.Label>Livekuna {new Date().getFullYear()}</S.Label>
-          <S.ExternalLink href="https://godiip.com" target="_blank">
+          <S.ExternalLink
+            className="diip"
+            href="https://godiip.com"
+            target="_blank"
+          >
             Powered by DIIP
           </S.ExternalLink>
         </S.TermsWrapper>

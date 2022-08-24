@@ -35,7 +35,7 @@ export const LinksWrapper = styled(Box)`
 `
 
 export const ScrollLink = styled(Link)`
-  font-weight: 400;
+  font-weight: bold;
   line-height: 100%;
   color: #332900;
   font-size: ${({ theme }) => theme.typography.pxToRem(18)};
