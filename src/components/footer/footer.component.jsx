@@ -9,6 +9,7 @@ import YtIcon from "../../assets/yt.svg"
 import CustomInput from "../custom-input/custom-input.component"
 import { useForm } from "react-hook-form"
 import CustomButton from "../custom-button/custom-button.component"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Footer = ({ className }) => {
   const {
@@ -25,9 +26,20 @@ const Footer = ({ className }) => {
     console.log(data)
   }
 
+  const staticQuery = useStaticQuery(graphql`
+    query {
+      backgroundImage: file(relativePath: { eq: "footer-banner.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+    }
+  `)
+
   return (
     <S.Wrapper className={className}>
-      <Container maxWidth="xl">
+      <S.BgImage img={staticQuery.backgroundImage} />
+      <S.CustomContainer maxWidth="xl">
         <S.TopWrapper>
           <S.FooterLogo />
           <S.InputWrapper>
@@ -105,7 +117,7 @@ const Footer = ({ className }) => {
             Powered by DIIP
           </S.ExternalLink>
         </S.TermsWrapper>
-      </Container>
+      </S.CustomContainer>
     </S.Wrapper>
   )
 }

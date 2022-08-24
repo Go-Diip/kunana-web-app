@@ -4,8 +4,22 @@ import { Link } from "react-scroll"
 import CustomInput from "../custom-input/custom-input.component"
 import CustomButton from "../custom-button/custom-button.component"
 import CustomImage from "../custom-image/custom-image.component"
+import { Container } from "@mui/material"
+
+export const BgImage = styled(CustomImage)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    display: none;
+  }
+`
 
 export const Wrapper = styled.footer`
+  position: relative;
+  z-index: 2;
   //color: white;
   padding: 4em 0 3em;
   background-color: ${({ theme }) => theme.palette.primary.main};
@@ -16,6 +30,10 @@ export const Wrapper = styled.footer`
       padding-left: 2.5em;
     }
   }
+`
+export const CustomContainer = styled(Container)`
+  position: relative;
+  z-index: 3;
 `
 
 export const TopWrapper = styled.div`
