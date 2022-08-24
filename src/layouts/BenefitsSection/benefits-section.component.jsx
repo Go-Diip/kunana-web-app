@@ -25,7 +25,7 @@ const BenefitsSection = ({ backgroundImage, tastyImg, benefits }) => {
           >
             {!isSM && (
               <Grid item xs={12} sm={6} md={3}>
-                <S.Image img={tastyImg} />
+                <S.CustomSticker />
               </Grid>
             )}
             {!isMD ? (

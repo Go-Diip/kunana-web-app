@@ -2,6 +2,7 @@ import styled from "styled-components"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 import { Container } from "@mui/material"
 import CustomImage from "../../components/custom-image/custom-image.component"
+import Sticker from "../../assets/sticker-green.svg"
 
 export const WrapperBackground = styled(CustomBgImage)`
   background-color: #fff6e2;
@@ -32,6 +33,19 @@ export const Image = styled(CustomImage)`
 
   ${({ theme }) => theme.breakpoints.up("md")} {
     max-width: 240px;
+  }
+`
+
+export const CustomSticker = styled(Sticker)`
+  max-width: 250px;
+  width: 100%;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    max-width: 270px;
+  }
+
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    max-width: 300px;
   }
 `
 
