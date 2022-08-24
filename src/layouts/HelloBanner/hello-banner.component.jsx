@@ -34,17 +34,21 @@ const HelloBanner = () => {
           </Grid>
         </Grid>
       </Container>
-      <S.GreenBg img={staticQuery.backgroundImage} />
-      <S.GreenBanner>
-        {/*<S.GreenSection />*/}
-        <S.CustomBottomContainer>
-          <S.CustomPalm />
-          <S.ContactTitle>
-            Something good for yourself and the environment.
-          </S.ContactTitle>
-          <CustomButton className="yellow">Contact Us</CustomButton>
-        </S.CustomBottomContainer>
-      </S.GreenBanner>
+      <S.BottomWrapper>
+        <S.GreenBg img={staticQuery.backgroundImage} />
+        <S.GreenBanner>
+          {/*<S.GreenSection />*/}
+          <S.CustomBottomContainer>
+            <S.CustomPalm />
+            <S.TextWrapper>
+              <S.ContactTitle>
+                Something good for yourself and the environment.
+              </S.ContactTitle>
+              <CustomButton className="yellow">Contact Us</CustomButton>
+            </S.TextWrapper>
+          </S.CustomBottomContainer>
+        </S.GreenBanner>
+      </S.BottomWrapper>
     </S.Wrapper>
   )
 }

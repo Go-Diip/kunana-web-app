@@ -35,11 +35,21 @@ export const Description = styled(Typography)`
   letter-spacing: -0.005em;
 `
 
+export const BottomWrapper = styled.div`
+  margin-top: -5rem;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    margin-top: 0;
+  }
+`
+
 export const GreenBanner = styled.div`
   background-color: ${({ theme }) => theme.palette.secondary.light};
   padding: 3rem 0;
   position: relative;
   z-index: 3;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding: 5rem 0;
+  }
 `
 export const GreenBg = styled(CustomImage)`
   margin-bottom: -2px;
@@ -66,9 +76,19 @@ export const CustomPalm = styled(Palm)`
   position: absolute;
   left: 0;
   bottom: -3rem;
+  z-index: 2;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    left: -2rem;
+    bottom: -5rem;
+  }
 `
 
 export const CustomBottomContainer = styled(Container)`
+  position: relative;
+`
+
+export const TextWrapper = styled.div`
+  z-index: 3;
   position: relative;
   display: flex;
   justify-content: center;
