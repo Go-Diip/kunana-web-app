@@ -4,6 +4,7 @@ import { Container, Typography } from "@mui/material"
 import Banana from "../../assets/banana-gafas.svg"
 import Green from "../../assets/green.svg"
 import Palm from "../../assets/palmera.svg"
+import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   background-color: #fff6e2;
@@ -39,6 +40,9 @@ export const GreenBanner = styled.div`
   padding: 3rem 0;
   position: relative;
   z-index: 3;
+`
+export const GreenBg = styled(CustomImage)`
+  margin-bottom: -2px;
 `
 
 export const GreenSection = styled(Green)`

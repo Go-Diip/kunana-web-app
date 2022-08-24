@@ -3,8 +3,18 @@ import * as S from "./hello-banner.styles"
 import { Container, Grid } from "@mui/material"
 import Banana from "../../assets/banana-gafas.svg"
 import CustomButton from "../../components/custom-button/custom-button.component"
+import { graphql, useStaticQuery } from "gatsby"
 
 const HelloBanner = () => {
+  const staticQuery = useStaticQuery(graphql`
+    query {
+      backgroundImage: file(relativePath: { eq: "hello-bg.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+    }
+  `)
   return (
     <S.Wrapper>
       <Container>
@@ -24,8 +34,9 @@ const HelloBanner = () => {
           </Grid>
         </Grid>
       </Container>
+      <S.GreenBg img={staticQuery.backgroundImage} />
       <S.GreenBanner>
-        <S.GreenSection />
+        {/*<S.GreenSection />*/}
         <S.CustomBottomContainer>
           <S.CustomPalm />
           <S.ContactTitle>

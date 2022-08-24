@@ -3,6 +3,7 @@ import Logo from "../../assets/header-logo.svg"
 import { Link } from "react-scroll"
 import CustomInput from "../custom-input/custom-input.component"
 import CustomButton from "../custom-button/custom-button.component"
+import CustomImage from "../custom-image/custom-image.component"
 
 export const Wrapper = styled.footer`
   //color: white;
