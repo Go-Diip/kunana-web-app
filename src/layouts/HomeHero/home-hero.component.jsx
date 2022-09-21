@@ -32,19 +32,23 @@ const HomeHero = ({
             <Grid item xs={5} md={6}>
               <S.MainContainer>
                 <S.LogoImage />
-                <S.TypewriterText>
-                  Richer than{" "}
-                  <Typewriter
-                    options={{
-                      strings: ["water,", "oatmilk,", "cow milk,"],
-                      autoStart: true,
-                      loop: true,
-                    }}
-                  />
-                </S.TypewriterText>
-                <S.Description>
-                  Plant-based milk made FROM UP-CYCLED BANANAS
-                </S.Description>
+                <div>
+                  <S.TypewriterText>
+                    Richer than{" "}
+                    <Typewriter
+                      options={{
+                        strings: ["water,", "oatmilk,", "cow milk,"],
+                        autoStart: true,
+                        loop: true,
+                      }}
+                    />
+                  </S.TypewriterText>
+                </div>
+                <div>
+                  <S.Description>
+                    Plant-based milk made FROM UP-CYCLED BANANAS
+                  </S.Description>
+                </div>
                 <S.Button className="hero" onClick={() => setIsOpen(true)}>
                   watch our story <S.PlayIcon />
                 </S.Button>
