@@ -11,7 +11,7 @@ console.log(`This WordPress Endpoint is used: '${process.env.WORDPRESS_URL}'`)
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.kunana.com`,
+    siteUrl: `https://www.kunanamilk.com`,
   },
   flags: {
     // FAST_DEV: true,
@@ -35,8 +35,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.kunana.com",
-        sitemap: "https://www.kunana.com/sitemap.xml",
+        host: "https://www.kunanamilk.com",
+        sitemap: "https://www.kunanamilk.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
