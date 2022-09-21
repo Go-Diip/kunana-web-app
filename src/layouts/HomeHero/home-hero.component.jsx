@@ -46,12 +46,12 @@ const HomeHero = ({
                 </div>
                 <div>
                   <S.Description>
-                    Plant-based milk made FROM UP-CYCLED BANANAS
+                    LIGHTER THAN A SMOOTHIE, AND MORE REFRESHING THAN BOTH
                   </S.Description>
                 </div>
-                <S.Button className="hero" onClick={() => setIsOpen(true)}>
-                  watch our story <S.PlayIcon />
-                </S.Button>
+                {/*<S.Button className="hero" onClick={() => setIsOpen(true)}>*/}
+                {/*  watch our story <S.PlayIcon />*/}
+                {/*</S.Button>*/}
               </S.MainContainer>
             </Grid>
           </Grid>
