@@ -79,12 +79,28 @@ export const Description = styled(Typography)`
   line-height: 120%;
   letter-spacing: -0.005em;
   font-family: ${({ theme }) => theme.fonts.tertiary};
-  margin-top: 1rem;
   margin-bottom: 1.5rem;
 
   ${({ theme }) => theme.breakpoints.up("sm")} {
     font-size: ${({ theme }) => theme.typography.pxToRem(35)};
     line-height: 120%;
+  }
+`
+
+export const TypewriterText = styled(Typography)`
+  font-size: ${({ theme }) => theme.typography.pxToRem(18)};
+  font-family: ${({ theme }) => theme.fonts.tertiary};
+  margin-top: 0.5rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #46281f;
+  .Typewriter {
+    display: inline-block;
+    color: #00b2e4;
+  }
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(48)};
   }
 `
 

@@ -56,7 +56,8 @@
     "react-slick": "^0.28.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
-    "swiper": "^8.3.2"
+    "swiper": "^8.3.2",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "prettier": "^2.4.1"

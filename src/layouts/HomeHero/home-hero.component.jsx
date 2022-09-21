@@ -5,6 +5,8 @@ import { Container, Grid } from "@mui/material"
 
 import LoadableModalVideo from "../../components/loadable-modal-video/loadable-modal-video"
 import "react-modal-video/css/modal-video.css"
+import Typewriter from "typewriter-effect"
+import { TypewriterText } from "./home-hero.styles"
 
 const HomeHero = ({
   backgroundImage,
@@ -30,6 +32,16 @@ const HomeHero = ({
             <Grid item xs={5} md={6}>
               <S.MainContainer>
                 <S.LogoImage />
+                <S.TypewriterText>
+                  Richer than{" "}
+                  <Typewriter
+                    options={{
+                      strings: ["water,", "oatmilk,", "cow milk,"],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </S.TypewriterText>
                 <S.Description>
                   Plant-based milk made FROM UP-CYCLED BANANAS
                 </S.Description>
