@@ -46,7 +46,7 @@ const HomeHero = ({
                 </div>
                 <div>
                   <S.Description>
-                    LIGHTER THAN A SMOOTHIE, AND MORE REFRESHING THAN BOTH
+                    LIGHTER THAN A SMOOTHIE, AND MORE REFRESHING THAN BOTH.
                   </S.Description>
                 </div>
                 {/*<S.Button className="hero" onClick={() => setIsOpen(true)}>*/}
