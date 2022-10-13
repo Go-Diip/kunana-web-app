@@ -23,9 +23,10 @@ const HelloBanner = () => {
             <S.TitleWrapper>
               <S.Title>Lucky for the planet, bananas don’t fart.</S.Title>
               <S.Description>
-                Saving the world’s water supply, one banana at a time. Less CO2.
-                Less Water. More BANANA. Bananas for the planet. We love the
-                sound of it.
+                Our three dairy-free Kunana flavors create far fewer CO
+                <sub>2</sub>&nbsp; emissions than cow's milk and use less water
+                than other alternative milk products. Bananas for the planet! We
+                love the sound of it.
               </S.Description>
             </S.TitleWrapper>
           </Grid>
@@ -42,7 +43,7 @@ const HelloBanner = () => {
             <S.CustomPalm />
             <S.TextWrapper>
               <S.ContactTitle>
-                Something good for yourself and the environment.
+                GOOD FOR THE ENVIRONMENT. GOOD FOR YOU.
               </S.ContactTitle>
               <CustomButton className="yellow">Contact Us</CustomButton>
             </S.TextWrapper>

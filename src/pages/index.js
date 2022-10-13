@@ -143,7 +143,7 @@ const Index = () => {
   const milks = [
     {
       image: staticQuery.greenMilk,
-      title: "Original Flavor",
+      title: "Original",
       background: "#3DAC48",
     },
     { image: staticQuery.browMilk, title: "Chocolate", background: "#FFD100" },
@@ -156,19 +156,19 @@ const Index = () => {
 
   const productProperties = [
     {
-      title: "use with just about anything",
+      title: "HONEST, SIMPLE INGREDIENTS",
       description:
-        "cereal, coffee, maybe even to dunk french fries in? We’re not judging, go ahead and go bananas.",
+        "We create our banana milk with a blend of banana puree, chickpeas and water. It delivers a unique natural taste with a creamy texture you're sure to love. ",
     },
     {
       title: "Low in sugar, high in amazing",
       description:
-        "Just as nutritious as other non-dairy milks. But with BANANAS.",
+        "A non-dairy milk made from fruit? Kunana is a great source of natural calcium, fiber, vitamin B12 and potassium. Each serving contains 5 grams of plant-based protein.",
     },
     {
-      title: "Low in sugar, high in amazing",
+      title: "USE IT ANY WAY YOU WANT",
       description:
-        "Just as nutritious as other non-dairy milks. But with BANANAS.",
+        "Pour it in your cereal. Add it to your coffee. Drink it straight up, or dunk your French fries in it. We're not judging. Go ahead, go bananas! ",
     },
   ]
 
@@ -204,7 +204,7 @@ const Index = () => {
       <BrownBanner />
       <InfoGrid items={infoItems} />
       <SaveBanner
-        title="Save one banana at the time."
+        title="REDUCING CARBON FOOTPRINT ONE BANANA AT A TIME."
         image={staticQuery.bananaHand}
       />
       <MilksGrid items={milks} />
@@ -213,7 +213,7 @@ const Index = () => {
         proteinImage={staticQuery.proteinImage}
         properties={productProperties}
       />
-      <RecipesSlider title="healthy Recipes with Kunana" recipes={recipes} />
+      <RecipesSlider title="THE HEALTHY TASTE OF KUNANA" recipes={recipes} />
 
       <HelloBanner />
     </Layout>
