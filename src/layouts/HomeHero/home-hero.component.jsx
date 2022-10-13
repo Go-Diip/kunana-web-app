@@ -32,9 +32,9 @@ const HomeHero = ({
             <Grid item xs={5} md={6}>
               <S.MainContainer>
                 <S.LogoImage />
-                <div>
+                {/* <div>
                   <S.TypewriterText>
-                    Richer than{" "}
+                    A PLANT-BASED
                     <Typewriter
                       options={{
                         strings: ["water,", "oatmilk,", "cow milk,"],
@@ -43,10 +43,10 @@ const HomeHero = ({
                       }}
                     />
                   </S.TypewriterText>
-                </div>
+                </div>*/}
                 <div>
                   <S.Description>
-                    LIGHTER THAN A SMOOTHIE, AND MORE REFRESHING THAN BOTH.
+                    A PLANT-BASED NON-DAIRY MILK MADE FROM FRUIT
                   </S.Description>
                 </div>
                 {/*<S.Button className="hero" onClick={() => setIsOpen(true)}>*/}

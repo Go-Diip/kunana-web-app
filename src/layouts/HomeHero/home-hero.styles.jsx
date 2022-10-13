@@ -79,6 +79,7 @@ export const Description = styled(Typography)`
   line-height: 120%;
   letter-spacing: -0.005em;
   font-family: ${({ theme }) => theme.fonts.tertiary};
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
 
   ${({ theme }) => theme.breakpoints.up("sm")} {

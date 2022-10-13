@@ -35,7 +35,12 @@ const Index = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      infoImg: file(relativePath: { eq: "info-img.png" }) {
+      superFruit: file(relativePath: { eq: "superfruit.JPG" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      coolBananas: file(relativePath: { eq: "cool-bananas.JPG" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -100,19 +105,19 @@ const Index = () => {
 
   const infoItems = [
     {
-      image: staticQuery.infoImg,
+      image: staticQuery.superFruit,
       title: "SUPERFRUIT",
       description:
         "Did you know that bananas are the world's most popular fruit? And with good reason! Bananas are a great source of potassium, fiber, and vitamin C.",
     },
     {
-      image: staticQuery.infoImg,
+      image: staticQuery.coolBananas,
       title: "COOL BANANAS",
       description:
         'Not every bunch of bananas gets picked for the store shelves. "Misshapen" bananas pack all the same nutrients, but often go unloved. In fact, some 1.3 million tons of bananas go to waste each year. We still find them "a-peeling" enough to use! ',
     },
     {
-      image: staticQuery.infoImg,
+      image: staticQuery.coolBananas,
       title: "GOING GREEN",
       description:
         "Ecuador is the world's largest exporter of bananas. Upcycling unused bananas prevents waste, and helps local farmers and their communities share in the benefits of a full crop yield.",
