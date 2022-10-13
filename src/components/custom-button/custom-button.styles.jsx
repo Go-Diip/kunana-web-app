@@ -13,7 +13,7 @@ export const CustomButton = styled(Button)`
   border: 1px solid transparent;
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   font-weight: 600 !important;
-  border-radius: 4px;
+  border-radius: 50px;
 
   ${({ theme }) => theme.breakpoints.up("md")} {
     padding: 0.5em 3em;
@@ -21,6 +21,27 @@ export const CustomButton = styled(Button)`
   &.light {
     background-color: white;
     color: ${({ theme }) => theme.palette.primary.main};
+  }
+
+  &.hero {
+    &:hover {
+      background-color: #715852;
+    }
+  }
+
+  &.brown {
+    background-color: #5b3529;
+    &:hover {
+      background-color: #715852;
+    }
+  }
+
+  &.yellow {
+    color: #46281f;
+    background-color: #ffd100;
+    &:hover {
+      background-color: #e1b800;
+    }
   }
 
   &.darkBorder {
@@ -40,7 +61,7 @@ export const CustomButton = styled(Button)`
     background-color: transparent;
   }
 
-  &:not(.light):not(.darkBorder):hover {
+  &:not(.light):not(.darkBorder):not(.hero):not(.brown):not(.yellow):hover {
     background-color: ${({ theme, color }) =>
       darken(
         theme.palette[color]

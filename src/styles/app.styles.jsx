@@ -165,6 +165,22 @@ const wordpress = css`
 `
 
 export const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: "Gotham-Book";
+    src: url("/fonts/Gotham-Book.otf") format("opentype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Gotham-Medium";
+    src: url("/fonts/Gotham-Medium.otf") format("opentype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Heinrich-Script";
+    src: url("/fonts/Heinrich-Script.otf") format("woff");
+    font-display: swap;
+  }
+  
   img, svg {
     max-width: 100%;
   }
@@ -193,6 +209,17 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
   }
   
+  .visuallyhidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+  }
+  
   ${wordpress}
   ${snipcart}
 `
@@ -210,6 +237,6 @@ export const AppContainer = styled.main`
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding-top: ${({ theme }) => theme.navHeight}px;
+  // padding-top: ${({ theme }) => theme.navHeight}px;
   background-color: #f8fdff;
 `
