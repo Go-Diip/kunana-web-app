@@ -101,21 +101,21 @@ const Index = () => {
   const infoItems = [
     {
       image: staticQuery.infoImg,
-      title: "WASTE",
+      title: "SUPERFRUIT",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint",
+        "Did you know that bananas are the world's most popular fruit? And with good reason! Bananas are a great source of potassium, fiber, and vitamin C.",
     },
     {
       image: staticQuery.infoImg,
-      title: "COMMUNITY",
+      title: "COOL BANANAS",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint",
+        'Not every bunch of bananas gets picked for the store shelves. "Misshapen" bananas pack all the same nutrients, but often go unloved. In fact, some 1.3 million tons of bananas go to waste each year. We still find them "a-peeling" enough to use! ',
     },
     {
       image: staticQuery.infoImg,
-      title: "COMMUNITY",
+      title: "GOING GREEN",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint",
+        "Ecuador is the world's largest exporter of bananas. Upcycling unused bananas prevents waste, and helps local farmers and their communities share in the benefits of a full crop yield.",
     },
   ]
 
