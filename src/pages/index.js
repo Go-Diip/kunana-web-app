@@ -122,20 +122,21 @@ const Index = () => {
   const benefits = [
     {
       image: <Plant />,
-      title: "Plant based",
-      description: "High in proteins, low in sugar, dairy-free beverage.",
+      title: "PLANT-BASED",
+      description:
+        "<p>A dairy-free drink that's <br/> high in proteins and low in sugar. </p>",
     },
     {
       image: <Thumb />,
       title: "Responsibly Sourced",
       description:
-        "About 100,000 tons of imperfect up-cycled bananas from Ecuador, which supports their farmers with additional revenue. ",
+        "<p>Our upcycled bananas come straight from the farms of Ecuador. </p>",
     },
     {
       image: <Trees />,
-      title: "Better for the Planet",
+      title: "SUSTAINABLE",
       description:
-        "Less CO2 emissions than traditional milk. Less water than almonds.",
+        "<p>Making Kunana uses less water than almond milk and creates fewer CO<sub>2</sub> emissions than traditional milk.</p>",
     },
   ]
 
