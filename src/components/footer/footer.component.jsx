@@ -44,7 +44,8 @@ const Footer = ({ className }) => {
           <S.FooterLogo />
           <S.InputWrapper>
             <S.FooterTitle>
-              Sign up to receive our newsletter and more information from Kunana
+              SIGN UP TO RECEIVE OUR NEWSLETTER <br />
+              AND MORE FROM KUNANA
             </S.FooterTitle>
             <S.CustomForm onSubmit={handleSubmit(onSubmit)}>
               <S.Input
@@ -112,7 +113,7 @@ const Footer = ({ className }) => {
           </S.LinksWrapper>
         </S.BottomWrapper>
         <S.TermsWrapper>
-          <S.Label>Livekuna {new Date().getFullYear()}</S.Label>
+          <S.Label>Kunana {new Date().getFullYear()}</S.Label>
           <S.ExternalLink
             className="diip"
             href="https://godiip.com"
