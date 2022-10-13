@@ -94,9 +94,9 @@ export const Title = styled.h3`
   margin: 0.5rem 0;
 `
 
-export const Description = styled.p`
+export const Description = styled.div`
   font-weight: 325;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   line-height: 22px;
   text-align: center;
   letter-spacing: -0.005em;

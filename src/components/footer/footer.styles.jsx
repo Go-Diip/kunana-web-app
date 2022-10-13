@@ -93,7 +93,7 @@ export const SubmitButton = styled(CustomButton)`
   right: 0;
   top: -0.2rem;
   padding: 0.5rem 1rem;
-  text-transform: lowercase;
+  text-transform: capitalize;
   ${({ theme }) => theme.breakpoints.down("md")} {
     top: 0;
   }

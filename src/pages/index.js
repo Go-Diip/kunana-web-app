@@ -35,7 +35,12 @@ const Index = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      infoImg: file(relativePath: { eq: "info-img.png" }) {
+      superFruit: file(relativePath: { eq: "superfruit.JPG" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      coolBananas: file(relativePath: { eq: "cool-bananas.JPG" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -100,49 +105,50 @@ const Index = () => {
 
   const infoItems = [
     {
-      image: staticQuery.infoImg,
-      title: "WASTE",
+      image: staticQuery.superFruit,
+      title: "SUPERFRUIT",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint",
+        "Did you know that bananas are the world's most popular fruit? And with good reason! Bananas are a great source of potassium, fiber, and vitamin C.",
     },
     {
-      image: staticQuery.infoImg,
-      title: "COMMUNITY",
+      image: staticQuery.coolBananas,
+      title: "COOL BANANAS",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint",
+        'Not every bunch of bananas gets picked for the store shelves. "Misshapen" bananas pack all the same nutrients, but often go unloved. In fact, some 1.3 million tons of bananas go to waste each year. We still find them "a-peeling" enough to use! ',
     },
     {
-      image: staticQuery.infoImg,
-      title: "COMMUNITY",
+      image: staticQuery.coolBananas,
+      title: "GOING GREEN",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint",
+        "Ecuador is the world's largest exporter of bananas. Upcycling unused bananas prevents waste, and helps local farmers and their communities share in the benefits of a full crop yield.",
     },
   ]
 
   const benefits = [
     {
       image: <Plant />,
-      title: "Plant based",
-      description: "High in proteins, low in sugar, dairy-free beverage.",
+      title: "PLANT-BASED",
+      description:
+        "<p>A dairy-free drink that's <br/> high in proteins and low in sugar. </p>",
     },
     {
       image: <Thumb />,
       title: "Responsibly Sourced",
       description:
-        "About 100,000 tons of imperfect up-cycled bananas from Ecuador, which supports their farmers with additional revenue. ",
+        "<p>Our upcycled bananas come straight from the farms of Ecuador. </p>",
     },
     {
       image: <Trees />,
-      title: "Better for the Planet",
+      title: "SUSTAINABLE",
       description:
-        "Less CO2 emissions than traditional milk. Less water than almonds.",
+        "<p>Making Kunana uses less water than almond milk and creates fewer CO<sub>2</sub> emissions than traditional milk.</p>",
     },
   ]
 
   const milks = [
     {
       image: staticQuery.greenMilk,
-      title: "Original Flavor",
+      title: "Original",
       background: "#3DAC48",
     },
     { image: staticQuery.browMilk, title: "Chocolate", background: "#FFD100" },
@@ -155,19 +161,19 @@ const Index = () => {
 
   const productProperties = [
     {
-      title: "use with just about anything",
+      title: "HONEST, SIMPLE INGREDIENTS",
       description:
-        "cereal, coffee, maybe even to dunk french fries in? We’re not judging, go ahead and go bananas.",
+        "We create our banana milk with a blend of banana puree, chickpeas and water. It delivers a unique natural taste with a creamy texture you're sure to love. ",
     },
     {
       title: "Low in sugar, high in amazing",
       description:
-        "Just as nutritious as other non-dairy milks. But with BANANAS.",
+        "A non-dairy milk made from fruit? Kunana is a great source of natural calcium, fiber, vitamin B12 and potassium. Each serving contains 5 grams of plant-based protein.",
     },
     {
-      title: "Low in sugar, high in amazing",
+      title: "USE IT ANY WAY YOU WANT",
       description:
-        "Just as nutritious as other non-dairy milks. But with BANANAS.",
+        "Pour it in your cereal. Add it to your coffee. Drink it straight up, or dunk your French fries in it. We're not judging. Go ahead, go bananas! ",
     },
   ]
 
@@ -203,7 +209,7 @@ const Index = () => {
       <BrownBanner />
       <InfoGrid items={infoItems} />
       <SaveBanner
-        title="Save one banana at the time."
+        title="REDUCING CARBON FOOTPRINT ONE BANANA AT A TIME."
         image={staticQuery.bananaHand}
       />
       <MilksGrid items={milks} />
@@ -212,7 +218,7 @@ const Index = () => {
         proteinImage={staticQuery.proteinImage}
         properties={productProperties}
       />
-      <RecipesSlider title="healthy Recipes with Kunana" recipes={recipes} />
+      <RecipesSlider title="THE HEALTHY TASTE OF KUNANA" recipes={recipes} />
 
       <HelloBanner />
     </Layout>
