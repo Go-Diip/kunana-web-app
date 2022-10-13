@@ -72,6 +72,26 @@ export const ContactTitle = styled(Typography)`
   line-height: 120%;
 `
 
+export const ExternalLink = styled.a`
+  color: ${({ theme }) => theme.palette.tertiary.dark};
+  background-color: ${({ theme }) => theme.palette.primary.main};
+  padding: 0.5em 1.5em;
+  border: 1px solid transparent;
+  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  font-weight: 600 !important;
+  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    padding: 0.5em 3em;
+  }
+
+  &:hover {
+    background-color: #e1b800;
+  }
+`
+
 export const CustomPalm = styled(Palm)`
   position: absolute;
   left: 0;

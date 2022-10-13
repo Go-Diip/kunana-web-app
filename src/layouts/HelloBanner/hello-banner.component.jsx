@@ -45,7 +45,9 @@ const HelloBanner = () => {
               <S.ContactTitle>
                 GOOD FOR THE ENVIRONMENT. GOOD FOR YOU.
               </S.ContactTitle>
-              <CustomButton className="yellow">Contact Us</CustomButton>
+              <S.ExternalLink href="mailto:kunanamilk@gmail.com">
+                Contact Us
+              </S.ExternalLink>
             </S.TextWrapper>
           </S.CustomBottomContainer>
         </S.GreenBanner>
