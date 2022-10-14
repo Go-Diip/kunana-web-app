@@ -68,7 +68,7 @@ export const CustomContainer = styled(Container)`
 
 export const BenefitItem = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   align-items: center;
 
   width: 100%;
