@@ -41,7 +41,7 @@ const BenefitsSection = ({ backgroundImage, tastyImg, benefits }) => {
                 {benefits.map(({ image, title, description }, index) => (
                   <Grid item xs={12} md={4} key={`benefit-item-${index}`}>
                     <S.BenefitItem>
-                      {image}
+                      <div>{image}</div>
                       <S.Title>{title}</S.Title>
                       <S.Description>{parse(description)}</S.Description>
                     </S.BenefitItem>
@@ -53,7 +53,7 @@ const BenefitsSection = ({ backgroundImage, tastyImg, benefits }) => {
                 {benefits.map(({ image, title, description }, index) => (
                   <Grid item xs={12} sm={6} key={`benefit-item-${index}`}>
                     <S.BenefitItem>
-                      {image}
+                      <div>{image}</div>
                       <S.Title>{title}</S.Title>
                       <S.Description>{parse(description)}</S.Description>
                     </S.BenefitItem>
