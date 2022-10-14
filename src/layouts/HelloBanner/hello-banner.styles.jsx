@@ -73,6 +73,7 @@ export const ContactTitle = styled(Typography)`
 `
 
 export const ExternalLink = styled.a`
+  font-family: ${({ theme }) => theme.fonts.secondary};
   color: ${({ theme }) => theme.palette.tertiary.dark};
   background-color: ${({ theme }) => theme.palette.primary.main};
   padding: 0.5em 1.5em;
