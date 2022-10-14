@@ -23,49 +23,23 @@ const BenefitsSection = ({ backgroundImage, tastyImg, benefits }) => {
             justifyContent="center"
             direction={{ xs: "row-reverse", md: "row" }}
           >
-            {!isSM && (
-              <Grid item xs={12} sm={6} md={3}>
-                <S.CustomSticker />
-              </Grid>
-            )}
-            {!isMD ? (
-              <Grid
-                item
-                container
-                xs={12}
-                sm={6}
-                md={9}
-                spacing={2}
-                justifyContent="center"
-              >
-                {benefits.map(({ image, title, description }, index) => (
-                  <Grid item xs={12} md={4} key={`benefit-item-${index}`}>
-                    <S.BenefitItem>
-                      <div>{image}</div>
-                      <S.Title>{title}</S.Title>
-                      <S.Description>{parse(description)}</S.Description>
-                    </S.BenefitItem>
-                  </Grid>
-                ))}
-              </Grid>
-            ) : (
-              <>
-                {benefits.map(({ image, title, description }, index) => (
-                  <Grid item xs={12} sm={6} key={`benefit-item-${index}`}>
-                    <S.BenefitItem>
-                      <div>{image}</div>
-                      <S.Title>{title}</S.Title>
-                      <S.Description>{parse(description)}</S.Description>
-                    </S.BenefitItem>
-                  </Grid>
-                ))}
-                {isSM && (
-                  <Grid item xs={12}>
-                    <S.Image img={tastyImg} />
-                  </Grid>
-                )}
-              </>
-            )}
+            <S.MobileSMGrid item xs={12} sm={6} md={3} className="down-sm">
+              <S.CustomSticker />
+            </S.MobileSMGrid>
+            <>
+              {benefits.map(({ image, title, description }, index) => (
+                <Grid item xs={12} sm={6} md={3} key={`benefit-item-${index}`}>
+                  <S.BenefitItem>
+                    <div>{image}</div>
+                    <S.Title>{title}</S.Title>
+                    <S.Description>{parse(description)}</S.Description>
+                  </S.BenefitItem>
+                </Grid>
+              ))}
+              <S.MobileSMGrid item xs={12} className="up-sm">
+                <S.Image img={tastyImg} />
+              </S.MobileSMGrid>
+            </>
           </Grid>
         </S.CustomContainer>
       </S.OverBackground>

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
-import { Container } from "@mui/material"
+import { Container, Grid } from "@mui/material"
 import CustomImage from "../../components/custom-image/custom-image.component"
 import Sticker from "../../assets/sticker-green.svg"
 
@@ -101,4 +101,17 @@ export const Description = styled.div`
   text-align: center;
   letter-spacing: -0.005em;
   margin: 0;
+`
+
+export const MobileSMGrid = styled(Grid)`
+  &.down-sm {
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      display: none;
+    }
+  }
+  &.up-sm {
+    ${({ theme }) => theme.breakpoints.up("sm")} {
+      display: none;
+    }
+  }
 `
