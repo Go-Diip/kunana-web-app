@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import * as S from "./footer.styles"
 import { Container } from "@mui/material"
@@ -6,12 +6,14 @@ import { Container } from "@mui/material"
 import InstagramIcon from "../../assets/insta.svg"
 import FbIcon from "../../assets/fb.svg"
 import YtIcon from "../../assets/yt.svg"
-import CustomInput from "../custom-input/custom-input.component"
 import { useForm } from "react-hook-form"
-import CustomButton from "../custom-button/custom-button.component"
 import { graphql, useStaticQuery } from "gatsby"
 
 const Footer = ({ className }) => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [successMessage, setSuccessMessage] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
+
   const {
     register,
     handleSubmit,
@@ -23,6 +25,15 @@ const Footer = ({ className }) => {
   })
 
   const onSubmit = async data => {
+    setIsLoading(true)
+    setSuccessMessage("")
+    setErrorMessage("")
+
+    setTimeout(() => {
+      setIsLoading(false)
+      setSuccessMessage("Thanks for subscribing!")
+    }, 2000)
+
     console.log(data)
   }
 
@@ -47,18 +58,32 @@ const Footer = ({ className }) => {
               SIGN UP TO RECEIVE OUR NEWSLETTER <br />
               AND MORE FROM KUNANA
             </S.FooterTitle>
-            <S.CustomForm onSubmit={handleSubmit(onSubmit)}>
-              <S.Input
-                name="email"
-                register={register}
-                errors={errors}
-                label="Email"
-                isRequired
-              />
-              <S.SubmitButton type="submit" className="brown">
-                Submit
-              </S.SubmitButton>
-            </S.CustomForm>
+
+            {!successMessage ? (
+              <S.FormWrapper>
+                <S.CustomForm onSubmit={handleSubmit(onSubmit)}>
+                  <S.Input
+                    name="email"
+                    register={register}
+                    errors={errors}
+                    label="Email"
+                    isRequired
+                  />
+                  <S.SubmitButton
+                    type="submit"
+                    className="brown"
+                    loading={isLoading}
+                  >
+                    Submit
+                  </S.SubmitButton>
+                </S.CustomForm>
+                {errorMessage && (
+                  <S.ErrorMessage>{errorMessage}</S.ErrorMessage>
+                )}
+              </S.FormWrapper>
+            ) : (
+              <S.SuccessMessage>{successMessage}</S.SuccessMessage>
+            )}
           </S.InputWrapper>
         </S.TopWrapper>
         <S.BottomWrapper>

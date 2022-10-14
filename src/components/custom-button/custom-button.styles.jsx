@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import Button from "@mui/material/Button"
+import { LoadingButton } from "@mui/lab"
 import { darken } from "@mui/system"
 
-export const CustomButton = styled(Button)`
+export const CustomButton = styled(LoadingButton)`
   color: white;
   background-color: ${({ theme, color }) =>
     theme.palette[color]
@@ -78,6 +78,14 @@ export const CustomButton = styled(Button)`
     background: lightgray;
     border-color: lightgray;
     cursor: not-allowed;
+  }
+
+  .MuiCircularProgress-root {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  .text {
+    ${({ loading }) => (loading ? "opacity: 0" : "opacity: 1")};
   }
 `
 

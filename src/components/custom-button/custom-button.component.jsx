@@ -4,7 +4,7 @@ import * as S from "./custom-button.styles"
 import PropTypes from "prop-types"
 
 const CustomButton = props => {
-  const { fullWidth, className, children } = props
+  const { fullWidth, className, children, loading } = props
   return (
     <>
       {/*{href ?*/}
@@ -22,13 +22,14 @@ const CustomButton = props => {
       {/*  </S.CustomButtonLink>*/}
       {/*  :*/}
       <S.CustomButton
+        loading={loading}
         className={`custom-button ${className}`}
         disableElevation
         fullWidth={fullWidth ? true : null}
         variant="contained"
         {...props}
       >
-        {children}
+        <span className="text"> {children}</span>
       </S.CustomButton>
       {/*}*/}
     </>

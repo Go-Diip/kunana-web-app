@@ -4,7 +4,7 @@ import { Link } from "react-scroll"
 import CustomInput from "../custom-input/custom-input.component"
 import CustomButton from "../custom-button/custom-button.component"
 import CustomImage from "../custom-image/custom-image.component"
-import { Container } from "@mui/material"
+import { Container, Typography } from "@mui/material"
 
 export const BgImage = styled(CustomImage)`
   position: absolute;
@@ -69,6 +69,10 @@ export const FooterTitle = styled.h3`
   }
 `
 
+export const FormWrapper = styled.div`
+  position: relative;
+`
+
 export const CustomForm = styled.form`
   display: flex;
   justify-content: space-between;
@@ -86,6 +90,9 @@ export const Input = styled(CustomInput)`
     position: absolute;
     bottom: -30px;
   }
+  input {
+    padding-right: 6rem;
+  }
 `
 
 export const SubmitButton = styled(CustomButton)`
@@ -96,6 +103,24 @@ export const SubmitButton = styled(CustomButton)`
   text-transform: capitalize;
   ${({ theme }) => theme.breakpoints.down("md")} {
     top: 0;
+  }
+`
+
+export const ErrorMessage = styled(Typography)`
+  color: red;
+  position: absolute;
+  bottom: -30px;
+`
+
+export const SuccessMessage = styled(Typography)`
+  font-weight: 400;
+  font-size: ${({ theme }) => theme.typography.pxToRem(25)};
+  line-height: 120%;
+  max-width: 635px;
+  width: 100%;
+
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    text-align: center;
   }
 `
 
