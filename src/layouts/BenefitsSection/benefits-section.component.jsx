@@ -55,7 +55,7 @@ const BenefitsSection = ({ backgroundImage, tastyImg, benefits }) => {
                     <S.BenefitItem>
                       {image}
                       <S.Title>{title}</S.Title>
-                      <S.Description>{description}</S.Description>
+                      <S.Description>{parse(description)}</S.Description>
                     </S.BenefitItem>
                   </Grid>
                 ))}
