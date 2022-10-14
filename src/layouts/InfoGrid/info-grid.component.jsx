@@ -17,7 +17,7 @@ const InfoGrid = ({ items }) => {
           alignItems={"center"}
         >
           <S.ImageGrid item xs={12} md={7}>
-            <CustomImage img={image} />
+            <CustomImage img={image} arPaddingPercentage={60} />
           </S.ImageGrid>
           <S.DescriptionGrid item xs={12} md={5}>
             <S.Title>{title}</S.Title>
