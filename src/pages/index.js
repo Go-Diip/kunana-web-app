@@ -40,7 +40,12 @@ const Index = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      coolBananas: file(relativePath: { eq: "cool-bananas.JPG" }) {
+      coolBananas: file(relativePath: { eq: "cool-bananas.jpeg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      goingGreen: file(relativePath: { eq: "going-green.JPG" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -117,7 +122,7 @@ const Index = () => {
         'Not every bunch of bananas gets picked for the store shelves. "Misshapen" bananas pack all the same nutrients, but often go unloved. In fact, some 1.3 million tons of bananas go to waste each year. We still find them "a-peeling" enough to use! ',
     },
     {
-      image: staticQuery.coolBananas,
+      image: staticQuery.goingGreen,
       title: "GOING GREEN",
       description:
         "Ecuador is the world's largest exporter of bananas. Upcycling unused bananas prevents waste, and helps local farmers and their communities share in the benefits of a full crop yield.",
@@ -151,7 +156,11 @@ const Index = () => {
       title: "Original",
       background: "#3DAC48",
     },
-    { image: staticQuery.browMilk, title: "Chocolate", background: "#FFD100" },
+    {
+      image: staticQuery.browMilk,
+      title: "Chocolate",
+      background: "rgb(98, 51, 17)",
+    },
     {
       image: staticQuery.blueMilk,
       title: "Unsweetened",
