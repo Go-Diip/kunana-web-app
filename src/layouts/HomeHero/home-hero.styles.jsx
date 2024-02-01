@@ -10,16 +10,27 @@ import LogoHero from "../../assets/logo-hero.svg"
 
 export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.palette.primary.main};
-  overflow: visible;
+  overflow: hidden;
   position: relative;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding-top: 5rem;
   }
 `
 
+export const DividerBg = styled.div`
+  width: 100%;
+  height: 335px;
+  clip-path: polygon(0% 0%, 100% 42%, 100% 100%, 0% 100%);
+  background-color: ${({ theme }) => theme.palette.primary.light};
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+`
+
 export const Background = styled(CustomBgImage)`
-  padding-top: 2.5em;
-  padding-bottom: 3.3rem;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -35,12 +46,7 @@ export const Background = styled(CustomBgImage)`
   }
 `
 
-export const CustomContainer = styled(Container)`
-  padding-top: 4rem;
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding-top: 0;
-  }
-`
+export const CustomContainer = styled(Container)``
 
 export const ImageGrid = styled(Grid)`
   position: relative;
@@ -48,28 +54,54 @@ export const ImageGrid = styled(Grid)`
 `
 
 export const ProductImage = styled(CustomImage)`
-  max-width: 480px;
-  width: 100%;
-  position: absolute;
+  position: relative;
+  left: -68px;
+  width: 110%;
   z-index: 4;
-  right: -25px;
-  bottom: -220px;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    bottom: -150px;
-    width: 263px;
   }
 `
 
+export const Spots = styled(CustomImage)``
+
 export const MainContainer = styled.div`
-  max-width: 350px;
   overflow: visible;
+
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    max-width: 375px;
+    margin-top: 6rem;
+    margin-right: 0;
+    margin-left: auto;
+  } ;
+`
+
+export const Sticker = styled(CustomImage)`
+  width: 288px;
+  margin-left: 1rem;
+  position: relative;
+  z-index: 4;
 `
 
 export const LogoImage = styled(LogoHero)`
   max-width: 280px;
   width: 100%;
   height: auto;
+`
+
+export const Subtitle = styled(Typography)`
+  font-family: ${({ theme }) => theme.fonts.tertiary};
+  font-size: ${({ theme }) => theme.typography.pxToRem(88)};
+  font-weight: 400;
+  line-height: ${({ theme }) => theme.typography.pxToRem(88)};
+  letter-spacing: -0.005em;
+  text-align: left;
+  color: ${({ theme }) => theme.palette.tertiary.dark};
+  margin-bottom: 1.25rem;
+
+  span {
+    color: #fffcf8;
+  }
 `
 
 export const Description = styled(Typography)`
@@ -79,8 +111,7 @@ export const Description = styled(Typography)`
   line-height: 120%;
   letter-spacing: -0.005em;
   font-family: ${({ theme }) => theme.fonts.tertiary};
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: ${({ theme }) => theme.typography.pxToRem(43)};
 
   ${({ theme }) => theme.breakpoints.up("sm")} {
     font-size: ${({ theme }) => theme.typography.pxToRem(35)};

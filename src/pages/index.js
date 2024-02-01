@@ -16,16 +16,22 @@ import ProductProperties from "../layouts/ProductProperties"
 import BrownBanner from "../layouts/BrownBanner"
 import HelloBanner from "../layouts/HelloBanner"
 import RecipesSlider from "../layouts/RecipesSlider"
+import GreenBanner from "../layouts/GreenBanner/green-banner.component"
 
 const Index = () => {
   const staticQuery = useStaticQuery(graphql`
     query {
-      backgroundImage: file(relativePath: { eq: "palm.png" }) {
+      backgroundImage: file(relativePath: { eq: "bg-spot-hero.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
       productImage: file(relativePath: { eq: "product-image.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      stickerImage: file(relativePath: { eq: "sticker.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -100,6 +106,16 @@ const Index = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
+      bananaGafas: file(relativePath: { eq: "banana-gafas.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      bananaDialog: file(relativePath: { eq: "banana-dialog.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
     }
   `)
 
@@ -127,21 +143,21 @@ const Index = () => {
   const benefits = [
     {
       image: <Plant />,
-      title: "PLANT-BASED",
+      title: "A BASE DE PLANTAS",
       description:
-        "<p>A dairy-free drink that's <br/> high in proteins and low in sugar. </p>",
-    },
-    {
-      image: <Thumb />,
-      title: "Responsibly Sourced",
-      description:
-        "<p>Our upcycled bananas come straight from the farms of Ecuador. </p>",
+        "<p>Una bebida libre de lácteos que es alta en proteína y bajo en azúcar. </p>",
     },
     {
       image: <Trees />,
-      title: "SUSTAINABLE",
+      title: "SUSTENTABLE",
       description:
-        "<p>Making Kunana uses less water than almond milk and creates fewer CO<sub>2</sub> emissions than traditional milk.</p>",
+        "<p>Kunana utiliza menos agua que una bebida de almendras y genera menos emisiones de CO2 que la leche de vaca.</p>",
+    },
+    {
+      image: <Thumb />,
+      title: "ORIGEN RESPONSAbLE",
+      description:
+        "<p>Nuestras bananas rescatadas vienen directo de los cultivos de Ecuador.</p>",
     },
   ]
 
@@ -200,11 +216,19 @@ const Index = () => {
         backgroundImage={staticQuery.backgroundImage}
         logoImage={staticQuery.logo}
         productImage={staticQuery.productImage}
+        stickerImage={staticQuery.stickerImage}
       />
       <BenefitsSection
         backgroundImage={staticQuery.benefitsImage}
         tastyImg={staticQuery.tastyImg}
         benefits={benefits}
+        title="SU SABOR TE SORPRENDERÁ"
+      />
+      <GreenBanner
+        firstImg={staticQuery.bananaDialog}
+        firstText="Creemos que las bananas imperfectas hacen una bebida bastante perfecta"
+        secondImg={staticQuery.bananaGafas}
+        secondText="Hecho con bananas rescatadas."
       />
       <BrownBanner />
       <InfoGrid items={infoItems} />
