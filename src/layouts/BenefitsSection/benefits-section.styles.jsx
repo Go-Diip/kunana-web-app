@@ -3,24 +3,12 @@ import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.comp
 import { Container, Grid } from "@mui/material"
 import CustomImage from "../../components/custom-image/custom-image.component"
 import Sticker from "../../assets/sticker-green.svg"
+import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 
-export const WrapperBackground = styled(CustomBgImage)`
-  background-color: #fff6e2;
+export const WrapperBackground = styled(SectionWrapper)`
+  background-color: ${({ theme }) => theme.palette.primary.light};
   z-index: unset;
-`
-
-export const OverBackground = styled.div`
-  background: linear-gradient(187deg, #ffd100 10%, transparent calc(10% + 2px));
-  width: 100%;
-  height: 100%;
-
-  ${({ theme }) => theme.breakpoints.up("sm")} {
-    background: linear-gradient(
-      182deg,
-      #ffd100 13%,
-      transparent calc(13% + 2px)
-    );
-  }
+  padding-top: 0;
 `
 
 export const Image = styled(CustomImage)`
@@ -50,26 +38,27 @@ export const CustomSticker = styled(Sticker)`
 `
 
 export const CustomContainer = styled(Container)`
-  padding-top: 5em;
-  padding-bottom: 3em;
-
-  ${({ theme }) => theme.breakpoints.down("md")} {
-    .MuiGrid-root {
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding-top: 6em;
-    padding-bottom: 1em;
-  }
+  // padding-top: 5em;
+  // padding-bottom: 3em;
+  //
+  // ${({ theme }) => theme.breakpoints.down("md")} {
+  //   .MuiGrid-root {
+  //     display: flex;
+  //     justify-content: center;
+  //   }
+  // }
+  //
+  // ${({ theme }) => theme.breakpoints.down("sm")} {
+  //   padding-top: 6em;
+  //   padding-bottom: 1em;
+  // }
 `
 
 export const BenefitItem = styled.div`
   display: flex;
   flex-direction: column !important;
   align-items: center;
+  margin: auto;
 
   width: 100%;
   max-width: 270px;
@@ -77,13 +66,19 @@ export const BenefitItem = styled.div`
   svg {
     width: 40px;
   }
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    margin-bottom: 2rem;
-  }
 `
 
-export const Title = styled.h3`
+export const Title = styled.h2`
+  font-family: ${({ theme }) => theme.fonts.tertiary};
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: ${({ theme }) => theme.typography.pxToRem(48)};
+  letter-spacing: -0.005em;
+  text-align: center;
+  margin-bottom: ${({ theme }) => theme.typography.pxToRem(52)};
+`
+
+export const Subtitle = styled.h3`
   font-family: ${({ theme }) => theme.fonts.tertiary};
   font-weight: 400;
   font-size: ${({ theme }) => theme.typography.pxToRem(24)};

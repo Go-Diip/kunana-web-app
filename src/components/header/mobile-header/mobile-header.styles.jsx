@@ -7,7 +7,7 @@ export const HeaderMobile = styled(Box)`
   flex-direction: column;
   justify-content: space-between;
   background-color: ${({ theme }) => theme.palette.primary.main};
-  padding: 1.5rem;
+  padding: 2rem 1rem 2.875rem 2.875rem;
   z-index: 9999;
   width: 100%;
   position: fixed;
@@ -27,18 +27,19 @@ export const HeaderMobile = styled(Box)`
 
 export const LinksWrapper = styled(Box)`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  align-items: center;
-  gap: 4rem;
+  align-items: flex-start;
+  gap: 2.8rem;
   height: 100%;
+  padding-top: 2rem;
 `
 
 export const ScrollLink = styled(Link)`
   font-weight: bold;
   line-height: 100%;
-  color: #332900;
-  font-size: ${({ theme }) => theme.typography.pxToRem(18)};
+  color: #332900 !important;
+  font-size: ${({ theme }) => theme.typography.pxToRem(24)};
   transition: 0.3s all ease;
   border-bottom: 3px solid transparent;
   &:hover {

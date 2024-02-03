@@ -18,8 +18,12 @@ const Header = () => {
   })
 
   return (
-    <S.Nav position="fixed" isDark={scrollTrigger} elevation={0}>
-      <Container maxWidth="xl" style={{ height: "100%" }}>
+    <S.Nav
+      position="fixed"
+      className={!scrollTrigger ? "transparent" : ""}
+      elevation={0}
+    >
+      <Container style={{ height: "100%" }}>
         <S.Wrapper>
           <CustomLink url="/" style={{ display: "flex" }}>
             <S.Logo />
@@ -37,7 +41,7 @@ const Header = () => {
                 offset={-100}
                 to="homeHero"
               >
-                Home
+                Inicio
               </S.ScrollLink>
               <S.ScrollLink
                 href="#ourStory"
@@ -46,7 +50,7 @@ const Header = () => {
                 smooth={true}
                 to="ourStory"
               >
-                Our Story
+                Nuestra historia
               </S.ScrollLink>
               <S.ScrollLink
                 href="#ourMilk"
@@ -55,7 +59,7 @@ const Header = () => {
                 offset={-100}
                 to="ourMilk"
               >
-                Our Milk
+                Nuestra bebida
               </S.ScrollLink>
               <S.ScrollLink
                 href="#ourBenefits"
@@ -64,7 +68,7 @@ const Header = () => {
                 offset={-100}
                 to="ourBenefits"
               >
-                Benefits
+                Beneficios
               </S.ScrollLink>
             </S.LinksWrapper>
           )}

@@ -34,16 +34,7 @@ const MobileHeader = ({
             to="homeHero"
             onClick={() => setIsActiveMenu(false)}
           >
-            Home
-          </S.ScrollLink>
-          <S.ScrollLink
-            spy={true}
-            smooth={true}
-            offset={-100}
-            to="ourMilk"
-            onClick={() => setIsActiveMenu(false)}
-          >
-            Our Milk
+            Inicio
           </S.ScrollLink>
           <S.ScrollLink
             spy={true}
@@ -52,8 +43,18 @@ const MobileHeader = ({
             to="ourStory"
             onClick={() => setIsActiveMenu(false)}
           >
-            Our Story
+            Nuestra historia
           </S.ScrollLink>
+          <S.ScrollLink
+            spy={true}
+            smooth={true}
+            offset={-100}
+            to="ourMilk"
+            onClick={() => setIsActiveMenu(false)}
+          >
+            Nuestra bebida
+          </S.ScrollLink>
+
           <S.ScrollLink
             spy={true}
             smooth={true}
@@ -61,7 +62,7 @@ const MobileHeader = ({
             to="ourBenefits"
             onClick={() => setIsActiveMenu(false)}
           >
-            Benefits
+            Beneficios
           </S.ScrollLink>
         </S.LinksWrapper>
       </S.HeaderMobile>

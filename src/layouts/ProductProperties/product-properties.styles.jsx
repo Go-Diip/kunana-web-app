@@ -6,7 +6,9 @@ export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.palette.primary.main};
 `
 
-export const Image = styled(CustomImage)``
+export const Image = styled(CustomImage)`
+  height: 100%;
+`
 
 export const PointBgImage = styled(CustomBgImage)`
   width: 100%;

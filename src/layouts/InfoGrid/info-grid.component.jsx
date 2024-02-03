@@ -8,21 +8,22 @@ const InfoGrid = ({ items }) => {
   if (!items) return null
   return (
     <S.Wrapper contained id="ourStory">
-      {items.map(({ image, title, description }, index) => (
+      {items.map(({ image, alt, title, description }, index) => (
         <S.CustomGrid
           container
-          spacing={{ xs: 3, md: 4, lg: 10 }}
           key={`info-item-${index}`}
           direction={index % 2 === 0 ? "row" : "row-reverse"}
-          alignItems={"center"}
+          spacing={{ xs: 1.25, md: 0 }}
         >
-          <S.ImageGrid item xs={12} md={7}>
-            <CustomImage img={image} arPaddingPercentage={60} />
-          </S.ImageGrid>
-          <S.DescriptionGrid item xs={12} md={5}>
-            <S.Title>{title}</S.Title>
-            <S.Description>{description}</S.Description>
-          </S.DescriptionGrid>
+          <Grid item xs={12} md={6}>
+            <S.Image img={image} alt={alt} />
+          </Grid>
+          <Grid className="textGrid" item xs={12} md={6}>
+            <S.DescriptionWrapper className={index % 2 === 0 && "spacing"}>
+              <S.Title>{title}</S.Title>
+              <S.Description>{description}</S.Description>
+            </S.DescriptionWrapper>
+          </Grid>
         </S.CustomGrid>
       ))}
     </S.Wrapper>

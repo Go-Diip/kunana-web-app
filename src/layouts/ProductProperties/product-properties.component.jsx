@@ -19,10 +19,10 @@ const ProductProperties = ({ productImage, proteinImage, properties }) => {
   return (
     <S.Wrapper id="ourBenefits">
       <Grid container>
-        <Grid item xs={12} md={5}>
-          <S.Image img={productImage} />
+        <Grid item xs={12} md={6}>
+          <S.Image img={productImage} alt="Jugo de banano" />
         </Grid>
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} md={6}>
           <S.PointBgImage img={staticQuery.points} tag="div">
             <S.BgImage img={proteinImage} tag="div">
               {properties.map(({ title, description }, index) => (
