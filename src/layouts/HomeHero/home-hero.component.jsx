@@ -32,16 +32,13 @@ const HomeHero = ({
     <S.Wrapper id="homeHero">
       <h1 class="visuallyhidden">Kunana</h1>
 
-      <S.Background img={backgroundImage} tag="div" loading="eager">
-        <S.DividerBg>
-          <S.Spots img={staticQuery.spots} />
-        </S.DividerBg>
-        <S.CustomContainer maxWidth="md">
-          <Grid container>
-            <Grid item xs={12} md={6}>
-              <S.MainContainer>
-                {/*<S.LogoImage />*/}
-                {/* <div>
+      <S.Background img={backgroundImage} />
+      <S.CustomContainer maxWidth="md">
+        <Grid container>
+          <Grid item xs={12} md={6}>
+            <S.MainContainer>
+              {/*<S.LogoImage />*/}
+              {/* <div>
                   <S.TypewriterText>
                     A PLANT-BASED
                     <Typewriter
@@ -53,28 +50,35 @@ const HomeHero = ({
                     />
                   </S.TypewriterText>
                 </div>*/}
-                <S.Subtitle>
-                  RESCATAMOS <span>BANANAS</span>
-                </S.Subtitle>
-                <S.Description>
-                  LA PRIMERA BEBIDA A BASE DE PLANTAS HECHA CON FRUTA!
-                </S.Description>
-                <S.Sticker img={stickerImage} />
-                {/*<S.Button className="hero" onClick={() => setIsOpen(true)}>*/}
-                {/*  watch our story <S.PlayIcon />*/}
-                {/*</S.Button>*/}
-              </S.MainContainer>
-            </Grid>
-            <S.ImageGrid item xs={12} md={6}>
-              <S.ProductImage
-                loading="eager"
-                img={productImage}
-                alt="Kunana milk"
-              />
-            </S.ImageGrid>
+              <S.Subtitle>
+                RESCATAMOS <span>BANANAS</span>
+              </S.Subtitle>
+              <S.Description>
+                LA PRIMERA BEBIDA A BASE DE PLANTAS HECHA CON FRUTA!
+              </S.Description>
+              <S.Sticker img={stickerImage} alt="100% Ecuatoriana 100% Deli" />
+              {/*<S.Button className="hero" onClick={() => setIsOpen(true)}>*/}
+              {/*  watch our story <S.PlayIcon />*/}
+              {/*</S.Button>*/}
+            </S.MainContainer>
           </Grid>
-        </S.CustomContainer>
-      </S.Background>
+          <S.ImageGrid item xs={12} md={6}>
+            <S.ProductImage
+              loading="eager"
+              img={productImage}
+              alt="Kunana milk"
+            />
+            <S.Sticker
+              className="mobile"
+              img={stickerImage}
+              alt="100% Ecuatoriana 100% Deli"
+            />
+          </S.ImageGrid>
+        </Grid>
+      </S.CustomContainer>
+      <S.DividerBg>
+        <S.Spots img={staticQuery.spots} />
+      </S.DividerBg>
       {/*<LoadableModalVideo*/}
       {/*  channel="youtube"*/}
       {/*  isOpen={isOpen}*/}

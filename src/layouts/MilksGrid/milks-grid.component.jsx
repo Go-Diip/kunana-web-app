@@ -7,7 +7,7 @@ const MilksGrid = ({ items }) => {
   return (
     <S.Wrapper id="ourMilk">
       <Grid container>
-        {items.map(({ image, title, background }, index) => (
+        {items.map(({ image, title, background, spot }, index) => (
           <S.CustomGrid
             item
             xs={12}
@@ -16,8 +16,9 @@ const MilksGrid = ({ items }) => {
             background={background}
           >
             <S.ItemContainer>
-              <S.Image img={image} />
+              <S.Spot img={spot} />
               <S.Title>{title}</S.Title>
+              <S.Image img={image} alt={title} />
             </S.ItemContainer>
           </S.CustomGrid>
         ))}

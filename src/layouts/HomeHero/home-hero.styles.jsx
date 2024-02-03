@@ -11,42 +11,71 @@ import LogoHero from "../../assets/logo-hero.svg"
 export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.palette.primary.main};
   overflow: hidden;
+  padding-top: 3rem;
   position: relative;
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding-top: 5rem;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding-top: 7.5rem;
   }
 `
 
 export const DividerBg = styled.div`
   width: 100%;
-  height: 335px;
-  clip-path: polygon(0% 0%, 100% 42%, 100% 100%, 0% 100%);
+  height: 620px;
+  clip-path: polygon(0% 0%, 100% 16%, 100% 100%, 0% 100%);
   background-color: ${({ theme }) => theme.palette.primary.light};
   z-index: 2;
   position: absolute;
   bottom: 0;
   left: 0;
-`
+  margin-bottom: -5px;
 
-export const Background = styled(CustomBgImage)`
-  padding-top: 4rem;
-  padding-bottom: 1rem;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: visible;
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding-top: 0;
-    padding-bottom: 1rem;
-
-    .gatsby-image-wrapper {
-    }
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    height: 335px;
+    clip-path: polygon(0% 0%, 100% 42%, 100% 100%, 0% 100%);
   }
 `
 
-export const CustomContainer = styled(Container)``
+export const Background = styled(CustomImage)`
+  position: absolute;
+  width: 450%;
+  height: 400%;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  bottom: 74%;
+  left: 16%;
+
+  transform: translate(-50%, 50%) rotate(-32deg) !important;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    width: 200%;
+    height: 200%;
+    bottom: 70%;
+    left: 50%;
+  }
+
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    bottom: 50%;
+    left: 41%;
+  }
+  ${({ theme }) => theme.breakpoints.up("lg")} {
+    bottom: 39%;
+    left: 41%;
+  }
+
+  .gatsby-image-wrapper {
+    overflow: visible;
+  }
+
+  img {
+    object-fit: contain !important;
+  }
+`
+
+export const CustomContainer = styled(Container)`
+  position: relative;
+  z-index: 4;
+`
 
 export const ImageGrid = styled(Grid)`
   position: relative;
@@ -59,7 +88,29 @@ export const ProductImage = styled(CustomImage)`
   width: 110%;
   z-index: 4;
 
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    left: 0;
+    width: 110%;
+    transform: rotate(-5deg);
+    img {
+      //max-height: 600px;
+      object-fit: contain !important;
+    }
+
+    .gatsby-image-wrapper {
+      div:first-child {
+        padding-top: 100% !important;
+      }
+    }
+  }
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
+    width: 150%;
+    left: -70px;
+    img {
+      //max-height: 475px;
+      object-fit: contain !important;
+    }
   }
 `
 
@@ -81,6 +132,27 @@ export const Sticker = styled(CustomImage)`
   margin-left: 1rem;
   position: relative;
   z-index: 4;
+
+  display: none;
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    display: block;
+  }
+
+  &.mobile {
+    display: block;
+    ${({ theme }) => theme.breakpoints.up("md")} {
+      display: none;
+    }
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      width: 155px;
+    }
+  }
 `
 
 export const LogoImage = styled(LogoHero)`
@@ -91,9 +163,9 @@ export const LogoImage = styled(LogoHero)`
 
 export const Subtitle = styled(Typography)`
   font-family: ${({ theme }) => theme.fonts.tertiary};
-  font-size: ${({ theme }) => theme.typography.pxToRem(88)};
+  font-size: ${({ theme }) => theme.typography.pxToRem(64)};
   font-weight: 400;
-  line-height: ${({ theme }) => theme.typography.pxToRem(88)};
+  line-height: ${({ theme }) => theme.typography.pxToRem(64)};
   letter-spacing: -0.005em;
   text-align: left;
   color: ${({ theme }) => theme.palette.tertiary.dark};
@@ -102,12 +174,17 @@ export const Subtitle = styled(Typography)`
   span {
     color: #fffcf8;
   }
+
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(88)};
+    line-height: ${({ theme }) => theme.typography.pxToRem(88)};
+  } ;
 `
 
 export const Description = styled(Typography)`
   text-transform: uppercase;
   color: #46281f;
-  font-size: ${({ theme }) => theme.typography.pxToRem(18)};
+  font-size: ${({ theme }) => theme.typography.pxToRem(32)};
   line-height: 120%;
   letter-spacing: -0.005em;
   font-family: ${({ theme }) => theme.fonts.tertiary};

@@ -66,10 +66,6 @@ export const BenefitItem = styled.div`
   svg {
     width: 40px;
   }
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    margin-bottom: 2rem;
-  }
 `
 
 export const Title = styled.h2`

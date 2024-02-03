@@ -5,14 +5,38 @@ import Typography from "@mui/material/Typography"
 
 export const Wrapper = styled(SectionWrapper)`
   background-color: ${({ theme }) => theme.palette.secondary.light};
+  overflow: hidden;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  } ;
 `
 
 export const SpotImg = styled(CustomImage)`
-  width: 100%;
-  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+
+  width: 566%;
+  height: 157%;
+
+  bottom: 67%;
+  left: 175%;
+
+  transform: translate(-50%, 50%) rotate(-25deg) !important;
+
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    transform: translate(-50%, 50%) rotate(-9deg) !important;
+    bottom: 60%;
+    left: 50%;
+    width: 175%;
+    height: 175%;
+  }
+
+  .gatsby-image-wrapper {
+    overflow: visible;
+  }
 `
 export const ItemWrapper = styled.div`
   display: flex;
@@ -44,6 +68,10 @@ export const Text = styled(Typography)`
   color: #f9f9f9;
   position: relative;
 
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    text-align: center;
+  }
+
   &.second-text {
     text-align: center;
   }
@@ -51,6 +79,11 @@ export const Text = styled(Typography)`
 export const ContentWrapper = styled.div`
   max-width: 1000px;
   margin: auto;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 `
 
 export const ImageWrapper = styled.div`
@@ -62,7 +95,12 @@ export const ImageWrapper = styled.div`
 
 export const Image = styled(CustomImage)`
   display: flex;
-  margin-left: 5rem;
+
+  margin: auto;
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    margin-left: 5rem;
+  }
+
   &.second-img {
     max-width: 313px;
     min-width: 313px;
@@ -71,6 +109,9 @@ export const Image = styled(CustomImage)`
   &.first-img {
     max-width: 228px;
     min-width: 228px;
-    margin-right: 3rem;
+
+    ${({ theme }) => theme.breakpoints.up("md")} {
+      margin-right: 3rem;
+    }
   }
 `

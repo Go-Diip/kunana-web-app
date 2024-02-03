@@ -2,59 +2,49 @@ import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import { Container, Typography } from "@mui/material"
 import BananaIcon from "../../assets/sticker-banana.svg"
+import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   background-color: ${({ theme }) => theme.palette.primary.dark};
+  position: relative;
+
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding: ${({ theme }) => theme.typography.pxToRem(50)} 0;
+  }
+
+  .MuiContainer-root {
+    position: relative;
+    z-index: 4;
+  }
 `
 
-export const Description = styled(Typography)`
+export const Subtitle = styled(Typography)`
   font-family: ${({ theme }) => theme.fonts.tertiary};
-  max-width: 685px;
+  max-width: 470px;
   font-weight: 400;
   font-size: 40px;
   line-height: 140%;
   color: white;
   letter-spacing: -0.03em;
+  margin-bottom: 2.5rem;
 
   ${({ theme }) => theme.breakpoints.down("md")} {
-    text-align: center;
-  }
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    max-width: 280px;
+    max-width: unset;
   }
 `
 
-export const CustomContainer = styled(Container)`
-  position: relative;
-
-  ${({ theme }) => theme.breakpoints.down("md")} {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+export const Description = styled(Typography)`
+  font-size: 1.25rem;
+  font-weight: 325;
+  line-height: 2rem;
+  text-align: left;
+  color: white;
 `
 
-export const Sticker = styled(BananaIcon)`
-  position: absolute;
-  display: none;
-  bottom: 0;
-  right: 15%;
-  z-index: 2;
-
-  @media (min-width: 900px) {
-    right: 0;
-    display: block;
-  }
-
-  @media (min-width: 1000px) {
-    right: 5%;
-  }
-
-  @media (min-width: 1150px) {
-    right: 21%;
-  }
+export const Sticker = styled(CustomImage)`
+  max-width: 349px;
+  margin: auto;
+  display: block;
 `
 
 export const StickerResponsive = styled(BananaIcon)`
@@ -64,4 +54,12 @@ export const StickerResponsive = styled(BananaIcon)`
   ${({ theme }) => theme.breakpoints.up("md")} {
     display: none;
   }
+`
+
+export const Spot = styled(CustomImage)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 `

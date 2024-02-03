@@ -9,6 +9,12 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 export const Wrapper = styled(SectionWrapper)`
   background-color: #fff6e2;
   padding-bottom: 0;
+  overflow: hidden;
+  padding-top: 0;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-top: 4rem;
+  } ;
 `
 
 export const TitleWrapper = styled.div`
@@ -47,12 +53,15 @@ export const GreenBanner = styled.div`
   padding: 3rem 0;
   position: relative;
   z-index: 3;
-  ${({ theme }) => theme.breakpoints.down("md")} {
-    padding: 5rem 0;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 12.5rem 0 7.2rem;
   }
 `
 export const GreenBg = styled(CustomImage)`
   margin-bottom: -2px;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    display: none;
+  }
 `
 
 export const GreenSection = styled(Green)`
@@ -68,8 +77,17 @@ export const ContactTitle = styled(Typography)`
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.tertiary};
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 120%;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    max-width: 225px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 2rem;
+    line-height: 120%;
+  } ;
 `
 
 export const ExternalLink = styled.a`
@@ -98,8 +116,46 @@ export const CustomPalm = styled(Palm)`
   bottom: -3rem;
   z-index: 2;
   ${({ theme }) => theme.breakpoints.down("md")} {
-    left: -2rem;
+    left: -5rem;
     bottom: -5rem;
+    height: 484px;
+  }
+
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    left: -5rem;
+    bottom: -7.5rem;
+    height: 484px;
+  }
+`
+
+export const BananaRock = styled(CustomImage)`
+  position: relative;
+  bottom: -50px;
+  height: 100%;
+  max-height: 500px;
+  max-width: 500px;
+  display: flex;
+
+  ${({ theme }) => theme.breakpoints.up("xl")} {
+    bottom: -70px;
+  }
+
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    img {
+      object-fit: contain !important;
+      max-height: 500px;
+      max-width: 500px;
+    }
+    margin-left: auto;
+    margin-right: 0;
+    bottom: -75px;
+  }
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    bottom: 0;
+    width: 125%;
+    height: 125%;
+    left: -2rem;
   }
 `
 
@@ -115,4 +171,8 @@ export const TextWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 28px;
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    padding-bottom: 3rem;
+  } ;
 `

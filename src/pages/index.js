@@ -17,6 +17,7 @@ import BrownBanner from "../layouts/BrownBanner"
 import HelloBanner from "../layouts/HelloBanner"
 import RecipesSlider from "../layouts/RecipesSlider"
 import GreenBanner from "../layouts/GreenBanner/green-banner.component"
+import LogosBanner from "../layouts/LogosBanner"
 
 const Index = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -51,6 +52,11 @@ const Index = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
+      bananasVerdes: file(relativePath: { eq: "verdes.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
       tastyImg: file(relativePath: { eq: "tasty-img.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
@@ -61,17 +67,32 @@ const Index = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      greenMilk: file(relativePath: { eq: "verde.png" }) {
+      greenMilk: file(relativePath: { eq: "pack-original.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      blueMilk: file(relativePath: { eq: "azul.png" }) {
+      blueMilk: file(relativePath: { eq: "pack-nosugar.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      browMilk: file(relativePath: { eq: "cafe.png" }) {
+      browMilk: file(relativePath: { eq: "pack-chocolate.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      spotOriginal: file(relativePath: { eq: "spot-original.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      spotChocolate: file(relativePath: { eq: "spot-chocolate.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      spotNoSugar: file(relativePath: { eq: "spot-sinazucar.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -116,27 +137,46 @@ const Index = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
+
+      innovopro: file(relativePath: { eq: "innovopro.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      elOrdenio: file(relativePath: { eq: "el-ordenio.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      tesalia: file(relativePath: { eq: "tesalia.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
     }
   `)
 
   const infoItems = [
     {
       image: staticQuery.superFruit,
-      title: "SUPERFRUIT",
+      alt: "Hombre recolectanto bananas",
+      title: "SUPERFRUTA",
       description:
-        "Did you know that bananas are the world's most popular fruit? And with good reason! Bananas are a great source of potassium, fiber, and vitamin C.",
+        "¿Sabías que las bananas son la fruta más popular del mundo?  ¡Y con razón! Las bananas son una gran fuente de potasio,  fibra y vitamina C.",
+    },
+    {
+      image: staticQuery.bananasVerdes,
+      alt: "Bananos verdes",
+      title: "BANANAS COOL",
+      description:
+        "No todas las bananas que se cultivan terminan en las perchas de los supermercados. Las bananas “feas” contienen los mismos nutrientes, pero a menudo son descartadas sólo por su apariencia. De hecho, cada año se desperdician alrededor de 1,3 millones de toneladas de bananas. ¡Nosotros creemos que son lo suficientemente perfectas para consumirlas!",
     },
     {
       image: staticQuery.coolBananas,
-      title: "COOL BANANAS",
+      alt: "Racimo de verde",
+      title: "VOLVERSE VERDE",
       description:
-        'Not every bunch of bananas gets picked for the store shelves. "Misshapen" bananas pack all the same nutrients, but often go unloved. In fact, some 1.3 million tons of bananas go to waste each year. We still find them "a-peeling" enough to use! ',
-    },
-    {
-      image: staticQuery.coolBananas,
-      title: "GOING GREEN",
-      description:
-        "Ecuador is the world's largest exporter of bananas. Upcycling unused bananas prevents waste, and helps local farmers and their communities share in the benefits of a full crop yield.",
+        "Ecuador es el mayor exportador de banano del mundo. Utilizar bananas “feas” evita el desperdicio de alimentos y ayuda a los agricultores locales y sus comunidades a generar mayores ingresos.",
     },
   ]
 
@@ -164,32 +204,39 @@ const Index = () => {
   const milks = [
     {
       image: staticQuery.greenMilk,
-      title: "Original",
-      background: "#3DAC48",
+      title: "Sabor Original",
+      background: "#60D06B",
+      spot: staticQuery.spotOriginal,
     },
-    { image: staticQuery.browMilk, title: "Chocolate", background: "#FFD100" },
+    {
+      image: staticQuery.browMilk,
+      title: "Chocolate",
+      background: "#5B3529",
+      spot: staticQuery.spotChocolate,
+    },
     {
       image: staticQuery.blueMilk,
-      title: "Unsweetened",
-      background: "#00B2E4",
+      title: "Sin azúcar",
+      background: "#51D1FF",
+      spot: staticQuery.spotNoSugar,
     },
   ]
 
   const productProperties = [
     {
-      title: "HONEST, SIMPLE INGREDIENTS",
+      title: "INGREDIENTES SIMPLES Y HONESTOS",
       description:
-        "We create our banana milk with a blend of banana puree, chickpeas and water. It delivers a unique natural taste with a creamy texture you're sure to love. ",
+        "Kunana utiliza puré de banana, garbanzos y agua para ofrecerte una bebida nutritiva y con unsabor y textura únicos que seguro te encantará.",
     },
     {
-      title: "Low in sugar, high in amazing",
+      title: "BAJO EN AZÚCAR, ALTO EN INCREÍBLE",
       description:
-        "A non-dairy milk made from fruit? Kunana is a great source of natural calcium, fiber, vitamin B12 and potassium. Each serving contains 5 grams of plant-based protein.",
+        "¿Una leche vegetal elaborada a base de frutas? Kunana es una gran fuente de calcio,VITAMINA D, B12 y fibra. Cada porción contiene 5 gramos de proteína de origen vegetal.",
     },
     {
-      title: "USE IT ANY WAY YOU WANT",
+      title: "ÚSALO COMO QUIERAS",
       description:
-        "Pour it in your cereal. Add it to your coffee. Drink it straight up, or dunk your French fries in it. We're not judging. Go ahead, go bananas! ",
+        "Viértelo en tu cereal, úsalo en batidos, agrégalo a tu café. Bébelo solo o sumerge tus papasfritas en él. No estamos juzgando. ¡Adelante, vuélvete loco! go bananas!",
     },
   ]
 
@@ -203,6 +250,15 @@ const Index = () => {
     {
       image: staticQuery.slider3,
     },
+  ]
+
+  const Logos = [
+    { logo: staticQuery.innovopro, alt: "Innovopro Logo" },
+    {
+      logo: staticQuery.elOrdenio,
+      alt: "EL Ordeño Logo",
+    },
+    { logo: staticQuery.tesalia, alt: "Tesalia Logo" },
   ]
 
   return (
@@ -232,17 +288,18 @@ const Index = () => {
       />
       <BrownBanner />
       <InfoGrid items={infoItems} />
-      <SaveBanner
-        title="REDUCING CARBON FOOTPRINT ONE BANANA AT A TIME."
-        image={staticQuery.bananaHand}
-      />
+      {/*<SaveBanner*/}
+      {/*  title="REDUCING CARBON FOOTPRINT ONE BANANA AT A TIME."*/}
+      {/*  image={staticQuery.bananaHand}*/}
+      {/*/>*/}
       <MilksGrid items={milks} />
       <ProductProperties
         productImage={staticQuery.milkJug}
         proteinImage={staticQuery.proteinImage}
         properties={productProperties}
       />
-      <RecipesSlider title="THE HEALTHY TASTE OF KUNANA" recipes={recipes} />
+      <LogosBanner title="Aliados estratégicos" logos={Logos} />
+      {/*<RecipesSlider title="THE HEALTHY TASTE OF KUNANA" recipes={recipes} />*/}
 
       <HelloBanner />
     </Layout>

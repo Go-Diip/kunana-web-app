@@ -39,20 +39,19 @@ const Footer = ({ className }) => {
   return (
     <S.Wrapper className={className}>
       <S.BgImage img={staticQuery.backgroundImage} />
-      <S.CustomContainer maxWidth="xl">
+      <S.CustomContainer>
         <S.TopWrapper>
           <S.FooterLogo />
           <S.InputWrapper>
             <S.FooterTitle>
-              SIGN UP TO RECEIVE OUR NEWSLETTER <br />
-              AND MORE FROM KUNANA
+              suscríbete a nuestra newsletter para más noticias de kunana
             </S.FooterTitle>
             <S.CustomForm onSubmit={handleSubmit(onSubmit)}>
               <S.Input
                 name="email"
                 register={register}
                 errors={errors}
-                label="Email"
+                label="correo electrónico"
                 isRequired
               />
               <S.SubmitButton type="submit" className="brown">
@@ -81,7 +80,7 @@ const Footer = ({ className }) => {
               offset={-100}
               to="homeHero"
             >
-              Home
+              Inicio
             </S.CustomScrollLink>
             <S.CustomScrollLink
               href="#ourStory"
@@ -90,7 +89,7 @@ const Footer = ({ className }) => {
               smooth={true}
               to="ourStory"
             >
-              Our Story
+              Historia
             </S.CustomScrollLink>
             <S.CustomScrollLink
               href="#ourMilk"
@@ -99,7 +98,7 @@ const Footer = ({ className }) => {
               offset={-100}
               to="ourMilk"
             >
-              Our Milk
+              Bebida
             </S.CustomScrollLink>
             <S.CustomScrollLink
               spy={true}
@@ -108,7 +107,7 @@ const Footer = ({ className }) => {
               offset={-100}
               to="ourBenefits"
             >
-              Our Benefits
+              Beneficios
             </S.CustomScrollLink>
           </S.LinksWrapper>
         </S.BottomWrapper>

@@ -23,7 +23,7 @@ const Header = () => {
       className={!scrollTrigger ? "transparent" : ""}
       elevation={0}
     >
-      <Container maxWidth="xl" style={{ height: "100%" }}>
+      <Container style={{ height: "100%" }}>
         <S.Wrapper>
           <CustomLink url="/" style={{ display: "flex" }}>
             <S.Logo />

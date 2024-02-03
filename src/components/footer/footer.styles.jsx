@@ -58,6 +58,7 @@ export const FooterTitle = styled.h3`
   line-height: 120%;
   max-width: 635px;
   width: 100%;
+  text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.tertiary};
   ${({ theme }) => theme.breakpoints.down("md")} {
     font-weight: 400;
