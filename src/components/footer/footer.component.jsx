@@ -62,11 +62,11 @@ const Footer = ({ className }) => {
                 name="email"
                 register={register}
                 errors={errors}
-                label="correo electrónico"
+                label="Correo electrónico"
                 isRequired
               />
               <S.SubmitButton type="submit" className="brown">
-                Submit
+                Enviar
               </S.SubmitButton>
             </S.CustomForm>
           </S.InputWrapper>

@@ -177,7 +177,7 @@ const Index = () => {
         "No todas las bananas que se cultivan terminan en las perchas de los supermercados. Las bananas “feas” contienen los mismos nutrientes, pero a menudo son descartadas sólo por su apariencia. De hecho, cada año se desperdician alrededor de 1,3 millones de toneladas de bananas. ¡Nosotros creemos que son lo suficientemente perfectas para consumirlas!",
     },
     {
-      image: staticQuery.coolBananas,
+      image: staticQuery.goingGreen,
       alt: "Racimo de verde",
       title: "VOLVERSE VERDE",
       description:
