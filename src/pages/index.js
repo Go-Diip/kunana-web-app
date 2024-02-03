@@ -271,6 +271,8 @@ const Index = () => {
       seo={{
         title: "Kunana",
         metaDesc: "Plant-based milk made FROM UP-CYCLED BANANA",
+        metaRobotsNoindex: "index",
+        metaRobotsNofollow: "follow",
       }}
     >
       <HomeHero
