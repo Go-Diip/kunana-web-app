@@ -50,7 +50,7 @@ const Header = () => {
                 smooth={true}
                 to="ourStory"
               >
-                Nuestra historia
+                ¿Por qué Kunana?
               </S.ScrollLink>
               <S.ScrollLink
                 href="#ourMilk"
@@ -59,7 +59,7 @@ const Header = () => {
                 offset={-100}
                 to="ourMilk"
               >
-                Nuestra bebida
+                Sabores
               </S.ScrollLink>
               <S.ScrollLink
                 href="#ourBenefits"
@@ -68,7 +68,7 @@ const Header = () => {
                 offset={-100}
                 to="ourBenefits"
               >
-                Beneficios
+                Nutrición
               </S.ScrollLink>
             </S.LinksWrapper>
           )}

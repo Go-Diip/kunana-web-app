@@ -89,7 +89,7 @@ const Footer = ({ className }) => {
               smooth={true}
               to="ourStory"
             >
-              Historia
+              ¿Por qué Kunana?
             </S.CustomScrollLink>
             <S.CustomScrollLink
               href="#ourMilk"
@@ -98,7 +98,7 @@ const Footer = ({ className }) => {
               offset={-100}
               to="ourMilk"
             >
-              Bebida
+              Sabores
             </S.CustomScrollLink>
             <S.CustomScrollLink
               spy={true}
@@ -107,7 +107,7 @@ const Footer = ({ className }) => {
               offset={-100}
               to="ourBenefits"
             >
-              Beneficios
+              Nutrición
             </S.CustomScrollLink>
           </S.LinksWrapper>
         </S.BottomWrapper>

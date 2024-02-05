@@ -42,17 +42,17 @@ const Index = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      superFruit: file(relativePath: { eq: "superfruit.JPG" }) {
+      superFruit: file(relativePath: { eq: "superfruta.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      coolBananas: file(relativePath: { eq: "cool-bananas.JPG" }) {
+      coolBananas: file(relativePath: { eq: "volverse-verde.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      bananasVerdes: file(relativePath: { eq: "verdes.jpg" }) {
+      bananasVerdes: file(relativePath: { eq: "bananas-cool.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -160,9 +160,9 @@ const Index = () => {
     {
       image: staticQuery.superFruit,
       alt: "Hombre recolectanto bananas",
-      title: "SUPERFRUTA",
+      title: "SUPERFRUTA Y SUPERGRANO",
       description:
-        "¿Sabías que las bananas son la fruta más popular del mundo?  ¡Y con razón! Las bananas son una gran fuente de potasio,  fibra y vitamina C.",
+        "¿Sabías que las bananas son la fruta más popular del mundo? ¡Y con razón! Las bananas son una gran fuente de potasio, fibra y vitamina C. Kunana también esta cargado de proteína que proviene del garbanzo, un super grano alto en proteína, fibra, vitaminas y minerales.",
     },
     {
       image: staticQuery.bananasVerdes,
@@ -183,7 +183,7 @@ const Index = () => {
   const benefits = [
     {
       image: <Plant />,
-      title: "A BASE DE PLANTAS",
+      title: "100% PLANT BASED",
       description:
         "<p>Una bebida libre de lácteos que es alta en proteína y bajo en azúcar. </p>",
     },
@@ -191,7 +191,7 @@ const Index = () => {
       image: <Trees />,
       title: "SUSTENTABLE",
       description:
-        "<p>Kunana utiliza menos agua que una bebida de almendras y genera menos emisiones de CO2 que la leche de vaca.</p>",
+        "<p>Kunana utiliza menos agua que una bebida de almendras, ocupa menos espacio de cultivo que la avena, y genera menos emisiones de CO2 que la leche de vaca.</p>",
     },
     {
       image: <Thumb />,
@@ -226,7 +226,7 @@ const Index = () => {
     {
       title: "INGREDIENTES SIMPLES Y HONESTOS",
       description:
-        "Kunana utiliza puré de banana, garbanzos y agua para ofrecerte una bebida nutritiva y con unsabor y textura únicos que seguro te encantará.",
+        "Kunana utiliza puré de banana, garbanzos, vitaminas y minerales para ofrecerte una bebida nutritiva y con un sabor y textura únicos que seguro te encantará.",
     },
     {
       title: "BAJO EN AZÚCAR, ALTO EN INCREÍBLE",
@@ -236,7 +236,7 @@ const Index = () => {
     {
       title: "ÚSALO COMO QUIERAS",
       description:
-        "Viértelo en tu cereal, úsalo en batidos, agrégalo a tu café. Bébelo solo o sumerge tus papasfritas en él. No estamos juzgando. ¡Adelante, vuélvete loco! go bananas!",
+        "Viértelo en tu cereal, úsalo en batidos, agrégalo a tu café. Bébelo solo o sumerge tus papas fritas en él. No te juzgamos ;) ¡Adelante, vuélvete loco, go bananas!",
     },
   ]
 
@@ -252,14 +252,7 @@ const Index = () => {
     },
   ]
 
-  const Logos = [
-    { logo: staticQuery.innovopro, alt: "Innovopro Logo" },
-    {
-      logo: staticQuery.elOrdenio,
-      alt: "EL Ordeño Logo",
-    },
-    { logo: staticQuery.tesalia, alt: "Tesalia Logo" },
-  ]
+  const Logos = [{ logo: staticQuery.tesalia, alt: "Tesalia Logo" }]
 
   return (
     <Layout
@@ -298,7 +291,7 @@ const Index = () => {
         proteinImage={staticQuery.proteinImage}
         properties={productProperties}
       />
-      <LogosBanner title="Aliados estratégicos" logos={Logos} />
+      <LogosBanner title="Aliado estratégico" logos={Logos} />
       {/*<RecipesSlider title="THE HEALTHY TASTE OF KUNANA" recipes={recipes} />*/}
 
       <HelloBanner />

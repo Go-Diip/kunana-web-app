@@ -43,7 +43,7 @@ const MobileHeader = ({
             to="ourStory"
             onClick={() => setIsActiveMenu(false)}
           >
-            Nuestra historia
+            ¿Por qué Kunana?
           </S.ScrollLink>
           <S.ScrollLink
             spy={true}
@@ -52,7 +52,7 @@ const MobileHeader = ({
             to="ourMilk"
             onClick={() => setIsActiveMenu(false)}
           >
-            Nuestra bebida
+            Sabores
           </S.ScrollLink>
 
           <S.ScrollLink
@@ -62,7 +62,7 @@ const MobileHeader = ({
             to="ourBenefits"
             onClick={() => setIsActiveMenu(false)}
           >
-            Beneficios
+            Nutrición
           </S.ScrollLink>
         </S.LinksWrapper>
       </S.HeaderMobile>
