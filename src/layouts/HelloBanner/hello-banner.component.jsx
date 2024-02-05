@@ -48,7 +48,7 @@ const HelloBanner = () => {
             <S.CustomPalm />
             <S.TextWrapper>
               <S.ContactTitle>
-                BUENO PARA EL PLANETA. BUENO PARA TI
+                BUENO PARA EL PLANETA. BUENO PARA TI.
               </S.ContactTitle>
               {/*<S.ExternalLink href="mailto:kunanamilk@gmail.com">*/}
               {/*  Contact Us*/}

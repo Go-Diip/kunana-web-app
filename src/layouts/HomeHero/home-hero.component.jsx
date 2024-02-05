@@ -54,7 +54,7 @@ const HomeHero = ({
                 RESCATAMOS <span>BANANAS</span>
               </S.Subtitle>
               <S.Description>
-                LA PRIMERA BEBIDA A BASE DE PLANTAS HECHA CON FRUTA!
+                ¡LA PRIMERA BEBIDA DE BANANA SIN LÁCTEOS!
               </S.Description>
               <S.Sticker img={stickerImage} alt="100% Ecuatoriana 100% Deli" />
               {/*<S.Button className="hero" onClick={() => setIsOpen(true)}>*/}
