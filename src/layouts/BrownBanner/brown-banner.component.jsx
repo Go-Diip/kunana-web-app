@@ -26,7 +26,7 @@ const BrownBanner = () => {
         <Grid container spacing={5}>
           <Grid item md={8} xs={12}>
             <S.Subtitle>
-              Por suerte para el planeta, los plátanos no se tiran gases.
+              Por suerte para el planeta, las bananas no se tiran gases.
             </S.Subtitle>
             <S.Description>
               Ecuador es el mayor exportador de banano del mundo.
