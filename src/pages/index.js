@@ -176,7 +176,7 @@ const Index = () => {
       alt: "Racimo de verde",
       title: "VOLVERSE VERDE",
       description:
-        "Ecuador es el mayor exportador de banano del mundo. Utilizar bananas “feas” evita el desperdicio de alimentos y ayuda a los agricultores locales y sus comunidades a generar mayores ingresos.",
+        "Las vacas producen metano durante la digestión, un gas de efecto invernadero que contribuye al calentamiento global y sea una fuente de contaminación ambiental. Nuestros tres sabores Kunana generan muchas menos emisiones de CO2 que la leche de vaca y utilizan menos agua que otras bebidas vegetales. ¡Bananas para el planeta! Nos encanta cómo suena.",
     },
   ]
 
