@@ -29,12 +29,10 @@ const BrownBanner = () => {
               Por suerte para el planeta, las bananas no se tiran gases.
             </S.Subtitle>
             <S.Description>
-              Ecuador es el mayor exportador de banano del mundo.
+              Las vacas producen metano durante la digestión, un gas de efecto invernadero que contribuye al calentamiento global y sea una fuente de contaminación ambiental.
             </S.Description>
             <S.Description>
-              Utilizar bananas “feas” evita el desperdicio de alimentos y ayuda
-              a los agricultores locales y sus comunidades a generar mayores
-              ingresos.
+              Nuestros tres sabores Kunana generan muchas menos emisiones de CO2 que la leche de vaca y utilizan menos agua que otras bebidas vegetales. ¡Bananas para el planeta! Nos encanta cómo suena.
             </S.Description>
           </Grid>
           <Grid item md={4} xs={12}>
