@@ -163,6 +163,11 @@ export const ExternalLink = styled.a`
     font-size: 12px;
     line-height: 100%;
   }
+
+  .MuiSvgIcon-root {
+    width: 26px;
+    height: 26px;
+  }
 `
 
 export const CustomScrollLink = styled(Link)`

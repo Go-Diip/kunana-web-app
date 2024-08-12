@@ -8,6 +8,7 @@ import FbIcon from "../../assets/fb.svg"
 import YtIcon from "../../assets/yt.svg"
 import { useForm } from "react-hook-form"
 import { graphql, useStaticQuery } from "gatsby"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
 
 const Footer = ({ className }) => {
   const [isLoading, setIsLoading] = useState(false)
@@ -88,15 +89,24 @@ const Footer = ({ className }) => {
         </S.TopWrapper>
         <S.BottomWrapper>
           <S.SocialIconsWrapper>
-            <S.ExternalLink href="https://www.instagram.com/go_kunana/" target="_blank">
+            <S.ExternalLink
+              href="https://www.instagram.com/go_kunana/"
+              target="_blank"
+            >
               <InstagramIcon />
             </S.ExternalLink>
-            <S.ExternalLink href="/" target="_blank">
-              <FbIcon />
+            <S.ExternalLink
+              href="https://www.linkedin.com/company/kunanamilk/"
+              target="_blank"
+            >
+              <LinkedInIcon />
             </S.ExternalLink>
-            <S.ExternalLink href="/" target="_blank">
-              <YtIcon />
-            </S.ExternalLink>
+            {/*<S.ExternalLink href="/" target="_blank">*/}
+            {/*  <FbIcon />*/}
+            {/*</S.ExternalLink>*/}
+            {/*<S.ExternalLink href="/" target="_blank">*/}
+            {/*  <YtIcon />*/}
+            {/*</S.ExternalLink>*/}
           </S.SocialIconsWrapper>
           <S.LinksWrapper>
             <S.CustomScrollLink
