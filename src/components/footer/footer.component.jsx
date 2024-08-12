@@ -88,7 +88,7 @@ const Footer = ({ className }) => {
         </S.TopWrapper>
         <S.BottomWrapper>
           <S.SocialIconsWrapper>
-            <S.ExternalLink href="/" target="_blank">
+            <S.ExternalLink href="https://www.instagram.com/go_kunana/" target="_blank">
               <InstagramIcon />
             </S.ExternalLink>
             <S.ExternalLink href="/" target="_blank">
